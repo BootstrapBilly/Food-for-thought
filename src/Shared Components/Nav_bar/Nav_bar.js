@@ -15,7 +15,7 @@ export const Nav_bar = () => {
 
     return (
 
-        <div className={classes.container} style={{ background: colours.secondary }}>
+        <div className={classes.container} style={{ background: colours.primary }}>
 
             <NavIcon
 

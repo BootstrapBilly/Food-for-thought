@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.circle {
+    height: 15px;
+    width: 15px;
+    margin-left: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+}

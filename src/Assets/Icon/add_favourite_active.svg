@@ -13,7 +13,7 @@
    class=""
    version="1.1"
    id="svg12"
-   sodipodi:docname="favourites.svg"
+   sodipodi:docname="add_favourite_active.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
      id="metadata18">
@@ -23,6 +23,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -42,7 +43,7 @@
      id="namedview14"
      showgrid="false"
      inkscape:zoom="0.4609375"
-     inkscape:cx="256"
+     inkscape:cx="-105.22034"
      inkscape:cy="256"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
@@ -50,30 +51,21 @@
      inkscape:current-layer="g10" />
   <g
      id="g10">
-    <circle
-       id="circle2"
-       data-old_color="#444156"
-       style="fill:#fbf7f5;fill-opacity:1"
-       class=""
-       data-original="#444156"
-       r="62.25"
-       cy="64.083"
-       cx="64" />
     <path
        inkscape:connector-curvature="0"
        id="path4"
        data-old_color="#fff16b"
-       style="fill:#ff7d47"
+       style="fill:#ff7d47;stroke-width:1.40438449"
        class=""
        data-original="#FFF16B"
-       d="M 64,91.512 35.673,101.585 36.5,71.532 18.167,47.705 47.004,39.204 64,14.405 80.996,39.204 109.833,47.705 91.5,71.532 l 0.827,30.053 z" />
+       d="M 64.635848,110.76067 24.85385,124.90703 26.015275,82.701068 0.26869487,49.238799 40.76693,37.300127 64.635848,2.4727969 88.504767,37.300127 129.003,49.238799 l -25.74657,33.462269 1.16142,42.205962 z" />
     <path
        inkscape:connector-curvature="0"
        id="path6"
        data-old_color="#ff7d47"
-       style="fill:#fff16b"
+       style="fill:#fff16b;stroke-width:1.40438449"
        class="active-path"
        data-original="#FF7D47"
-       d="M 64,79.988 46.963,86.046 47.461,67.971 36.435,53.641 53.778,48.528 64,33.613 l 10.222,14.915 17.343,5.113 -11.026,14.33 0.498,18.075 z" />
+       d="M 64.635848,94.576543 40.70935,103.0843 41.408733,77.700055 25.92399,57.575226 50.28023,50.394608 64.635848,29.448213 78.991466,50.394608 103.34771,57.575226 87.862962,77.700055 88.562346,103.0843 Z" />
   </g>
 </svg>

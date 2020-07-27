@@ -19,8 +19,6 @@ export const Nav_icon = props => {
 
     },[url])
 
-    console.log(props.to)
-    console.log(active_icon)
     return (
 
         <div className={classes.container} onClick={()=> set_redirect(props.to)}>

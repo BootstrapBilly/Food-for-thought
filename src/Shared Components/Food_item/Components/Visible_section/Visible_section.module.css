@@ -1,0 +1,50 @@
+.container{
+    display: flex;
+    padding: 5px;
+    position: relative;
+}
+
+.thumbnail{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.kcals{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.text_section{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.favourite_icon{
+    height: 30px;
+    width: 30px;
+}
+
+.favourite_icon_container{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 5px;
+    top: 13px;
+    width: 50px;
+}
+
+.favourite_caption{
+    font-size: 14px;
+    font-weight: 900;
+}

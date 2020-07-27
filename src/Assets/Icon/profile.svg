@@ -42,19 +42,19 @@
      id="namedview17"
      showgrid="false"
      inkscape:zoom="0.4609375"
-     inkscape:cx="256"
+     inkscape:cx="-105.22034"
      inkscape:cy="256"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="Capa_1" />
   <path
-     style="fill:#ffffff"
+     style="fill:#fbf7f5;fill-opacity:1"
      inkscape:connector-curvature="0"
      id="path2"
      d="M 256,0 95.602,256 256,512 C 397.385,512 512,397.385 512,256 512,114.615 397.385,0 256,0 Z" />
   <path
-     style="fill:#ffffff"
+     style="fill:#fbf7f5;fill-opacity:1"
      inkscape:connector-curvature="0"
      id="path4"
      d="M 0,256 C 0,397.385 114.615,512 256,512 V 0 C 114.615,0 0,114.615 0,256 Z" />
