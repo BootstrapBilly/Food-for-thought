@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    color: white;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 2px;
+    transition: transform 0.15s ease-in-out;
+}
+
+.active_icon{
+    transform: scale(1.5);
+    position: relative;
+    bottom: 10px;
+    background-color: #B267FE;
+    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 0;
+    border-radius: 40px;
+    transition: transform 0.15s ease-in-out;
+}
+
+.active_text{
+    margin-bottom: 5px;
+}
