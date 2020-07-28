@@ -18,7 +18,7 @@ export const Nav_bar = () => {
             <NavIcon
 
                 to={"/recommended"}
-                text={"Inspire Me"}
+                text={"Food Ideas"}
                 alt={"A navigation icon to lead to the recommended page"}
                 source="recommended"
 

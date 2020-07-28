@@ -1,0 +1,24 @@
+.container{
+    position: fixed;
+    left: -76%;
+    top: 0;
+    height: 100%;
+    width: 75%;
+    border-right: 0.5px solid rgba(128, 128, 128, 0.342);
+    transition: left 0.2s ease-in-out;
+}
+
+
+.container_open{
+    left: 0;
+    transition: left 0.2s ease-in-out;
+}
+
+.collapsible_area{
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    height: 100%;
+    left: 75%;
+    top: 0;
+}

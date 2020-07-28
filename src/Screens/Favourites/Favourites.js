@@ -5,6 +5,7 @@ import classes from './Favourites.module.css'
 
 //components
 import NavBar from "../../Shared Components/Nav_bar/Nav_bar"
+import TopBar from "../../Shared Components/Top_bar/Top_bar"
 
 //redux hooks
 import { useSelector, useDispatch } from "react-redux"
@@ -54,6 +55,8 @@ export const Favourites = () => {
     return (
 
         <div className={classes.container}>
+
+            <TopBar page={"Favourites"}/>
 
             {favourites.map((food_item, index) => <FoodItem data={food_item} key={index} />)}
 
