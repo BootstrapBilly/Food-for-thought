@@ -6,7 +6,7 @@ export const production = "http://localhost:4000/"//dev
 const sendPost = (url, body, type) => {
 
     //if the body is empty, log it to the console
-    if (typeof body !== "object" || body === null) return console.log("\nSENDPOSTREQ - INVALID PARAMETER SUPPLIED : \nThe body(second) parameter must be an object")
+    if (typeof body !== "object" || body === null) return console.log("\nSENDPOSTREQ - INVALID PARAMETER SUPPLIED : \nThe body(first) parameter must be an object")
     
     if(type === "get") return axios.get(`${production}${url}`)//if the type is get, send a get request
 

@@ -25,7 +25,7 @@ export const Visible_section = props => {
 
             </div>
 
-            <FavouriteButton />
+            <FavouriteButton data={props.data} />
 
         </div>
 
