@@ -10,7 +10,6 @@ export const Cons = props => {
 
         <div className={classes.container}>
 
-
             <span className={classes.title}>Bad :</span>
 
             {props.data.map(con =>
