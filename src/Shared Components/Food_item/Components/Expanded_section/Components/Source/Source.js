@@ -11,7 +11,7 @@ export const Source = props => {
 
         <div className={classes.container}>
 
-            <a href={props.source} className={classes.title} style={{color:colours.primary}}>The source of this nutrition data can be found by tapping here</a>
+            <a href={props.source} className={classes.title} style={{color:colours.primary}}>{props.additional_text ? props.additional_text : "The source of this nutrition data can be found by tapping here"}</a>
 
         </div>
 

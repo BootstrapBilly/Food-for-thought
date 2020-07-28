@@ -22,6 +22,8 @@ export const Expanded_section = props => {
 
             <Source source={props.data.source} />
 
+            {props.data.additional_source && <Source source={props.data.additional_source} additional_text={"Mercury concerns can be found by tapping here"} />}
+
         </div>
 
     )
