@@ -12,7 +12,9 @@ export const Filter_square = props => {
 
     return (
 
-        <div className={classes.container} style={{ background: is_active && colours.primary }} onClick={props.handle_toggle.bind(this, props.details.name)}>
+        <div className={classes.container} onClick={props.handle_toggle.bind(this, props.details.name)}>
+
+            {is_active && <div className={classes.animation_container}></div>}
 
             <img
                 src={
@@ -20,7 +22,7 @@ export const Filter_square = props => {
                 alt={`${props.details.name} filter icon`}
                 className={classes.icon} />
 
-            <span style={{ color: is_active && colours.white, marginTop:"5px" }}>{props.details.name}</span>
+            <span style={{ color: is_active && colours.white, marginTop:"5px", zIndex:"2" }}>{props.details.name}</span>
 
         </div>
 
