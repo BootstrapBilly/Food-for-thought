@@ -28,23 +28,3 @@
     margin-top: 5px;
 }
 
-.favourite_icon{
-    height: 30px;
-    width: 30px;
-}
-
-.favourite_icon_container{
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 5px;
-    top: 13px;
-    width: 50px;
-}
-
-.favourite_caption{
-    font-size: 14px;
-    font-weight: 900;
-}

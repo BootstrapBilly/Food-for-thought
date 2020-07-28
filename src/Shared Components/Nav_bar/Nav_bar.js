@@ -11,8 +11,6 @@ import colours from '../../util/colours'
 
 export const Nav_bar = () => {
 
-    const url = `/${window.location.href.split("/")[3]}`
-
     return (
 
         <div className={classes.container} style={{ background: colours.primary }}>
