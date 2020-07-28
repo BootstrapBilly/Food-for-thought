@@ -18,7 +18,7 @@
 
 .filter_container {
     position: absolute;
-    left: 5px;
+    left: 8px;
     top: 5px;
     display: flex;
     justify-content: center;
@@ -27,8 +27,8 @@
 }
 
 .filter_icon {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
 }
 
 .filter_caption{
@@ -38,7 +38,7 @@
 
 .search_container {
     position: absolute;
-    right: 5px;
+    right: 8px;
     top: 5px;
     display: flex;
     justify-content: center;
@@ -47,8 +47,8 @@
 }
 
 .search_icon {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
 }
 
 .search_caption{

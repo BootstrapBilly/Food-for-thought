@@ -9,7 +9,7 @@ const food_items = [
         source: "https://nutritiondata.self.com/facts/fruits-and-fruit-juices/1843/2",
         pros: ["High in healthy fats", "Low in sugar", "High in many vitamins and minerals including C, K, Folate, Potassium and more"],
         cons: ["Can be expensive", "High in kcalories"],
-        categories: ["Vegetarian", "Lunch", "Dinner"]
+        categories: ["Vegetarian", "Lunch", "Breakfast", "< 5 mins"]
 
     },
 
@@ -22,7 +22,7 @@ const food_items = [
         source: "https://nutritiondata.self.com/facts/dairy-and-egg-products/111/2",
         pros: ["Cheap to buy", "Very low in calories", "High in protein", "High in many vitamins and minerals including A, D, B2, B9, B12, Iron, Phosphorous and more"],
         cons: ["Very high in cholesterol (343% of RDA)", "High in saturated fats"],
-        categories: ["Breakfast", "Lunch", "Dinner", "< 200 Kcal"]
+        categories: ["Breakfast", "Lunch"]
 
     },
 
@@ -35,7 +35,7 @@ const food_items = [
         source: "https://nutritiondata.self.com/facts/cereal-grains-and-pasta/5708/2",
         pros: ["Cheap to buy", "Can be used to make many different foods. E.g. Healthy Oat cookies", "High in complex carbohydrates to keep you fuller for longer", "High in many vitamins and minerals including B1, Iron, Magnesium, Phospohorous and Zinc", "Good for your heart"],
         cons: ["Very high in manganese (123% of RDA) which can be toxic in excessive doses", "Many instant oats have added sugar (maple syrup ect)"],
-        categories: ["Breakfast", "< 200 Kcal", "Snacks", "Vegetarian"]
+        categories: ["Breakfast", "Vegetarian"]
 
     },
 
@@ -48,7 +48,7 @@ const food_items = [
         source: "https://nutritiondata.self.com/facts/nut-and-seed-products/3085/2",
         pros: ["Cheap to buy", "Can be eaten with no preparation", "High in healthy fats", "High in many vitamins and minerals including B2, E, Magnesium and Copper"],
         cons: ["Eating in excess may lead to constipation"],
-        categories: ["< 200 Kcal", "Snacks", "Vegetarian"]
+        categories: ["< 5 mins", "Snacks", "Vegetarian"]
 
     },
 
@@ -62,7 +62,7 @@ const food_items = [
         additional_source: "https://holisticacare.com/pros-cons-tuna/",
         pros: ["Cheap to buy", "Very high in protein", "High in omega 3 fatty acids", "High in many vitamins and minerals including B3, B6, B12, Phosphorous and Selenium"],
         cons: ["High in mercury, which is toxic in large doses (Research recommends you limit yourself to 3 times per month)"],
-        categories: ["< 200 Kcal", "Lunch", "Dinner"]
+        categories: ["< 5 mins", "Lunch", "Dinner"]
 
     },
 
@@ -75,7 +75,7 @@ const food_items = [
         source: "https://nutritiondata.self.com/facts/finfish-and-shellfish-products/4259/2",
         pros: ["High in many vitamins and minerals including B1, B3, B12, Phosphorous, Potassium and Selenium", "Very high in healthy omega 3 fatty acids", "Very high in protein"],
         cons: ["High in calories compared to other fish", "Can be expensive"],
-        categories: [ "Lunch", "Dinner"]
+        categories: ["Dinner"]
 
     },
 

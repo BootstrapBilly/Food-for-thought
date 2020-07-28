@@ -49,7 +49,7 @@ export const Filter_panel = props => {
 
     //_functions
     const handle_toggle = filter => {dispatch(toggle_filter(filter))}
-    
+
     return (
 
         <React.Fragment>
@@ -78,7 +78,7 @@ export const Filter_panel = props => {
                         { name: "Dinner", icon: "dinner" },
                         { name: "Snacks", icon: "snacks" },
                         { name: "Vegetarian", icon: "vegetarian" },
-                        { name: "< 200 Kcal", icon: "lessthan" }
+                        { name: "< 5 mins", icon: "lessthan" }
 
                     ].map((filter, index) => <FilterSquare key={index} details={filter} active_filters={active_filters} handle_toggle={filter => handle_toggle(filter)} />)}
 
