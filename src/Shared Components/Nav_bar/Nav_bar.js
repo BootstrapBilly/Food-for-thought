@@ -17,9 +17,9 @@ export const Nav_bar = () => {
 
             <NavIcon
 
-                to={"/recommended"}
+                to={"/"}
                 text={"Food Ideas"}
-                alt={"A navigation icon to lead to the recommended page"}
+                alt={"A navigation icon to leading to the food ideas page"}
                 source="recommended"
 
             />
@@ -28,16 +28,16 @@ export const Nav_bar = () => {
 
                 to={"/favourites"}
                 text={"Favourites"}
-                alt={"A navigation icon to lead to the Favourites page"}
+                alt={"A navigation icon to leading to the Favourites page"}
                 source="favourites"
 
             />
 
             <NavIcon
 
-                to={"/profile"}
-                text={"Profile"}
-                alt={"A navigation icon to lead to the profile page"}
+                to={"/accessibility"}
+                text={"Accessiblity"}
+                alt={"A navigation icon to leading to the Accessibility page"}
                 source="profile"
 
             />

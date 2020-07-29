@@ -41,9 +41,9 @@
      inkscape:window-height="1017"
      id="namedview17"
      showgrid="false"
-     inkscape:zoom="0.4609375"
-     inkscape:cx="-105.22034"
-     inkscape:cy="256"
+     inkscape:zoom="0.65186406"
+     inkscape:cx="-709.6705"
+     inkscape:cy="232.09043"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -58,24 +58,95 @@
      inkscape:connector-curvature="0"
      id="path4"
      d="M 0,256 C 0,397.385 114.615,512 256,512 V 0 C 114.615,0 0,114.615 0,256 Z" />
-  <path
-     style="fill:#d4aa00;fill-opacity:1"
-     inkscape:connector-curvature="0"
-     id="path6"
-     d="M 256,60 190.212,165 256,270 C 313.99,270 361,222.99 361,165 361,107.01 313.99,60 256,60 Z" />
-  <path
-     style="fill:#d4aa00;fill-opacity:1"
-     inkscape:connector-curvature="0"
-     id="path8"
-     d="m 151,165 c 0,57.99 47.01,105 105,105 V 60 c -57.99,0 -105,47.01 -105,105 z" />
-  <path
-     style="fill:#d4aa00;fill-opacity:1"
-     inkscape:connector-curvature="0"
-     id="path10"
-     d="M 424.649,335.443 C 404.716,312.918 376.049,300 346,300 h -90 l -60,76 60,76 c 70.322,0 135.636,-38.01 170.454,-99.198 l 5.306,-9.325 z" />
-  <path
-     style="fill:#d4aa00;fill-opacity:1"
-     inkscape:connector-curvature="0"
-     id="path12"
-     d="m 166,300 c -30.049,0 -58.716,12.918 -78.649,35.443 l -7.11,8.035 5.306,9.325 C 120.364,413.99 185.678,452 256,452 V 300 Z" />
+  <g
+     id="g1148"
+     transform="matrix(0.75039371,0,0,0.75039371,72.525038,58.577238)"
+     style="fill:#d4aa00;fill-opacity:1">
+    <g
+       id="g1089"
+       style="fill:#d4aa00;fill-opacity:1">
+	<g
+   id="g1087"
+   style="fill:#d4aa00;fill-opacity:1">
+		<g
+   id="g1085"
+   style="fill:#d4aa00;fill-opacity:1">
+			<path
+   id="path1081"
+   d="m 378.711,394.061 c -9.87,-4.963 -21.892,-0.983 -26.853,8.884 -21.417,42.596 -64.312,69.056 -111.949,69.056 -69.043,0 -125.214,-56.171 -125.214,-125.214 0,-36.985 16.232,-71.888 44.534,-95.76 8.444,-7.122 9.515,-19.74 2.394,-28.183 -7.122,-8.447 -19.743,-9.515 -28.183,-2.394 -37.333,31.489 -58.745,77.537 -58.745,126.336 0,91.1 74.114,165.214 165.214,165.214 63.296,0 119.937,-35.897 147.686,-91.087 4.962,-9.869 0.984,-21.892 -8.884,-26.852 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d4aa00;fill-opacity:1" />
+
+			<path
+   id="path1083"
+   d="M 430.654,359.107 320.956,260.773 c -3.669,-3.289 -8.423,-5.107 -13.35,-5.107 h -81.271 v -22.575 h 65.818 c 11.046,0 20,-8.954 20,-20 0,-11.046 -8.954,-20 -20,-20 H 226.335 V 180.823 C 267.209,171.675 297.85,135.109 297.85,91.516 297.85,41.054 256.796,0 206.335,0 c -50.462,0 -91.516,41.054 -91.516,91.516 0,43.593 30.641,80.159 71.516,89.307 v 94.843 c 0,11.046 8.954,20 20,20 h 93.619 l 104.001,93.227 c 8.216,7.365 20.861,6.69 28.242,-1.543 7.373,-8.225 6.682,-20.87 -1.543,-28.243 z M 154.819,91.516 c 0,-28.407 23.11,-51.516 51.516,-51.516 28.405,0 51.515,23.109 51.515,51.515 0,28.406 -23.11,51.515 -51.515,51.515 -28.406,0 -51.516,-23.109 -51.516,-51.514 z"
+   inkscape:connector-curvature="0"
+   style="fill:#d4aa00;fill-opacity:1" />
+
+		</g>
+
+	</g>
+
+</g>
+    <g
+       id="g1091"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1093"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1095"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1097"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1099"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1101"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1103"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1105"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1107"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1109"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1111"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1113"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1115"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1117"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+    <g
+       id="g1119"
+       style="fill:#d4aa00;fill-opacity:1">
+</g>
+  </g>
 </svg>

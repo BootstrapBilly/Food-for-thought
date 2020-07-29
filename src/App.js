@@ -16,9 +16,9 @@ const App = () => {
 
       <Switch>
 
-        <Route path="/recommended" component={Recommended} />
+        <Route path="/" exact component={Recommended} />
         <Route path="/favourites" component={Favourites} />
-        <Route path="/profile" component={Profile} />
+        <Route path="/accessibility" component={Profile} />
 
       </Switch>
 

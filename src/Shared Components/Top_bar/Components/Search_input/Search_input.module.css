@@ -1,0 +1,71 @@
+.container {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    transition: right 0.3s ease-in-out;
+    right: 0;
+}
+
+.icon_container_expanded{
+  right:190px
+}
+
+.search_icon {
+    width: 30px;
+    height: 30px;
+    transform: rotate(270deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.search_icon_expanded {
+    transform: rotate(0deg);
+}
+
+.search_caption{
+    color: white;
+    font-size: 14px;
+}
+
+.input{
+    position: relative;
+    top: 8px;
+    right: -20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid white;
+    height: 20px;
+    width: 160px;
+    animation: fade-in 0.3s ease-in forwards;
+    opacity: 0;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+}
+
+@keyframes fade-in{
+
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.input::placeholder{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.759);
+    font-weight: 100;
+}

@@ -18,6 +18,7 @@ export const Recommended = () => {
 
     //?selectors
     const filters = useSelector(state => state.filters.filters)
+    const search_string = useSelector(state => state.search.search_string)
 
     //*states
     const [items, set_items] = useState(food_items)
@@ -53,6 +54,31 @@ export const Recommended = () => {
         else set_items(food_items)
 
     },[filters])
+
+    useEffect(()=> {
+
+        if(search_string === "") set_items(food_items)
+
+        if(search_string){
+
+            const filtered_items = []
+
+            items.forEach(item => {
+
+                const lowercase_title = item.title.toLowerCase()
+
+                if(lowercase_title.includes(search_string.toLowerCase())){
+
+                    filtered_items.push(item)
+
+                }
+
+            })
+
+            set_items(filtered_items)
+        }
+
+    }, [search_string])
 
     return (
 

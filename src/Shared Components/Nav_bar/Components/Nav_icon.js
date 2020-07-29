@@ -6,20 +6,38 @@ import classes from './Nav_icon.module.css'
 //external
 import { Redirect } from "react-router-dom"
 
+//redux hooks
+import {useDispatch} from "react-redux"
+
+//redux action creators
+import {clear_filters} from "../../../Store/Actions/1_handle_filters_action"
+import {clear_search_string} from "../../../Store/Actions/2_handle_search_action"
+
 export const Nav_icon = props => {
 
     //-config
+    const dispatch = useDispatch()//initialise the usedispatch hook
     const url = `/${window.location.href.split("/")[3]}`//get the current url in the browser
 
     //*states
     const [redirect, set_redirect] = useState(null)//this state does nothing until it is set, then when it is, it triggers the redirect (set by clicking an icon)
     const [active_icon, set_active_icon] = useState(null)//determines the currently active icon (to make it poke out of the bar at the bottom)
 
+    //!effects
     useEffect(() => { set_active_icon(url) }, [url])//whenever the url changes, set the icon to match so it is active
+
+    //_functions
+    const handle_redirect = () => {
+
+        dispatch(clear_filters())//clear any active filters before navigating
+        dispatch(clear_search_string())//clear the search string before navigating
+        set_redirect(props.to)//redirect them to their desired page
+
+    }
 
     return (
 
-        <div className={classes.container} onClick={() => set_redirect(props.to)}>
+        <div className={classes.container} onClick={() => handle_redirect()}>
 
             <img
 

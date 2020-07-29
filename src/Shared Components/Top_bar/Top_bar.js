@@ -7,14 +7,15 @@ import colours from "../../util/colours"
 
 //assets
 import Filter from "../../Assets/Icon/filter.svg"
-import Search from "../../Assets/Icon/search.svg"
 
 //components
 import FilterPanel from "./Components/Filter_panel/Filter_panel"
+import Search from "./Components/Search_input/Search_input"
 
 export const Top_bar = props => {
 
     const [panel_open, set_panel_open] = useState(false)//determine whether or not the filter panel is in view
+    const [search_expanded, set_search_expanded] = useState(false)//determine whether the search input is expanded and visible (also hides the title)
 
     return (
 
@@ -27,16 +28,11 @@ export const Top_bar = props => {
 
             </div>
 
-            <span className={classes.title}>{props.page}</span>
+            <FilterPanel open={panel_open} handle_close={() => set_panel_open(false)} />
 
-            <div className={classes.search_container}>
+            <span className={classes.title} style={{display:search_expanded && "none"}}>{props.page}</span>
 
-                <img src={Search} alt="Search for food icon icon" className={classes.search_icon} />
-                <span className={classes.search_caption}>Search</span>
-
-            </div>
-
-            <FilterPanel open={panel_open} handle_close={()=> set_panel_open(false)} />
+            <Search handle_expand_search={()=> set_search_expanded(!search_expanded)} search_expanded={search_expanded}/>
 
         </div>
 

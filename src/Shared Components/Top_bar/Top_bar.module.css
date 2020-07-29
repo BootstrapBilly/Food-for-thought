@@ -36,25 +36,6 @@
     font-size: 14px;
 }
 
-.search_container {
-    position: absolute;
-    right: 8px;
-    top: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.search_icon {
-    width: 30px;
-    height: 30px;
-}
-
-.search_caption{
-    color: white;
-    font-size: 14px;
-}
 
 .filter_panel_closable_area{
     position: fixed;
