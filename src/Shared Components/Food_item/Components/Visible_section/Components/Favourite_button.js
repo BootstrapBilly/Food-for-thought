@@ -19,6 +19,7 @@ export const Favourite_button = props => {
 
     //*states
     const [is_favourited, set_is_favourited] = useState(false)//determine whether to show the active favourite or non active icon
+    const [show_animation, set_show_animation] = useState(false)//used to show the spin animation when added to favourites
 
     //-config
     const dispatch = useDispatch()//initialise the usedispatch hook
@@ -45,8 +46,24 @@ export const Favourite_button = props => {
         // eslint-disable-next-line
     }, [response])//re-run the effect whenever the response changes
 
+    useEffect(() => {//this effect is called to cleanup the subscription to the show animation state after it has been played
+
+        if (show_animation) {
+
+            setTimeout(() => {//after .5s
+                
+                set_show_animation(false)//set the state to false (which removes the animated class)
+
+            }, 500);
+
+        }
+
+    }, [show_animation])
+
     //_functions
     const handle_toggle_favourite = () => {//this function is called whenever the user clicks the favourite icon
+
+        if (!is_favourited) set_show_animation(true)//set the show animation state to add the animated class to the icon
 
         dispatch(send_request(props.data, "toggle_favourite"))//add or remove the favourite from the database
 
@@ -61,7 +78,7 @@ export const Favourite_button = props => {
             <img
 
                 src={is_favourited ? Favourite_active : Favourite}
-                className={classes.favourite_icon}
+                className={[classes.favourite_icon, show_animation && classes.favourite_icon_animated].join(" ")}
                 alt={`Add to favourites`}
 
             />
