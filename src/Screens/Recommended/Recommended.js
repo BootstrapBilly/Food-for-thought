@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 
 //css
 import classes from './Recommended.module.css'
@@ -12,7 +12,7 @@ import FoodItem from "../../Shared Components/Food_item/Food_item"
 import food_items from "../../Data/data"
 
 //redux hooks
-import {useSelector} from "react-redux"
+import { useSelector } from "react-redux"
 
 export const Recommended = () => {
 
@@ -20,14 +20,21 @@ export const Recommended = () => {
     const filters = useSelector(state => state.filters.filters)
     const search_string = useSelector(state => state.search.search_string)
 
-    //*states
-    const [items, set_items] = useState(food_items)
 
-    useEffect(()=> {
+    const handle_filters = (filters, search_string, food_items) => {
 
-        if(filters.length){
+        const filtered_items = []
+        const searched_for_items = []
 
-            const filtered_items = []
+        if (!search_string && filters.length < 1) {
+
+            console.log("inside")
+
+            return set_items(food_items)
+
+        }
+
+        if (filters.length) {
 
             food_items.forEach(item => {
 
@@ -35,11 +42,11 @@ export const Recommended = () => {
 
                     filters.forEach(filter => {
 
-                        if(filter === category) {
+                        if (filter === category) {
 
                             const item_already_inside = filtered_items.find(filtered_item => filtered_item === item)
 
-                            if(!item_already_inside) filtered_items.push(item)
+                            if (!item_already_inside) filtered_items.push(item)
                         }
 
                     })
@@ -47,38 +54,50 @@ export const Recommended = () => {
 
             })
 
-            set_items(filtered_items)
-
         }
 
-        else set_items(food_items)
+        if (search_string) {
 
-    },[filters])
+            let array_to_search;
 
-    useEffect(()=> {
+            if (filters.length) {
 
-        if(search_string === "") set_items(food_items)
+                array_to_search = filtered_items
 
-        if(search_string){
+            }
 
-            const filtered_items = []
+            else { array_to_search = food_items }
 
-            items.forEach(item => {
+            array_to_search.forEach(item => {
 
                 const lowercase_title = item.title.toLowerCase()
 
-                if(lowercase_title.includes(search_string.toLowerCase())){
+                if (lowercase_title.includes(search_string.toLowerCase())) {
 
-                    filtered_items.push(item)
+                    searched_for_items.push(item)
 
                 }
 
             })
 
-            set_items(filtered_items)
+            return set_items(searched_for_items)
+
         }
 
-    }, [search_string])
+        else if (filters.length) return set_items(filtered_items)
+
+    }
+
+    //*states
+    const [items, set_items] = useState(food_items)
+
+    useEffect(() => {
+
+
+        handle_filters(filters, search_string, food_items)
+
+
+    }, [filters, search_string])
 
     return (
 
