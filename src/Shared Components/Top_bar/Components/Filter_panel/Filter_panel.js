@@ -18,7 +18,7 @@ import filter_blue from "../../../../Assets/Icon/filter-blue.svg"
 import {useSelector, useDispatch} from "react-redux"
 
 //redux action creators
-import {toggle_filter} from "../.././../../Store/Actions/1_handle_filters_action"
+import {toggle_filter, clear_filters} from "../.././../../Store/Actions/1_handle_filters_action"
 
 export const Filter_panel = props => {
 
@@ -84,8 +84,14 @@ export const Filter_panel = props => {
 
                 </div>
 
-            </div>
+                <div className={classes.button_container}>
 
+                    <div className={classes.reset_button} style={{background:active_filters.length ? colours.primary : "grey"}} 
+                    onClick={()=> active_filters.length && dispatch(clear_filters())}>Clear all filters</div>
+
+                </div>
+
+            </div>
 
             <div className={classes.collapsible_area} style={{ display: props.open ? "block" : "none" }} onClick={props.handle_close}></div>
 

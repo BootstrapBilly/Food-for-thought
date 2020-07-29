@@ -1,4 +1,4 @@
-import { TOGGLE_FILTER } from "../Actions/1_handle_filters_action"
+import { TOGGLE_FILTER, CLEAR_FILTERS } from "../Actions/1_handle_filters_action"
 
 const initialState = {//set the initial state
 
@@ -14,9 +14,13 @@ const handle_filters = (state = initialState, action) => {
 
             const filter_is_active = state.filters.find(active_filter => active_filter === action.payload)
 
-            if (filter_is_active) return {...state, filters : [...state.filters.filter(active_filter => active_filter !== action.payload)]}
-        
-            else return {...state, filters : [...state.filters, action.payload]}
+            if (filter_is_active) return { ...state, filters: [...state.filters.filter(active_filter => active_filter !== action.payload)] }
+
+            else return { ...state, filters: [...state.filters, action.payload] }
+
+        case CLEAR_FILTERS:
+
+            return { ...state, filters: [] }
 
         default:
 
