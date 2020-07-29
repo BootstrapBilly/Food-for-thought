@@ -1,8 +1,10 @@
 const colours = {
 
-    primary:"#0f52ba",
-    secondary: "#B267FE",
-    white: "#FBF7F5" 
+    primary: window.localStorage.getItem("primary") || "#0f52ba",
+    secondary: window.localStorage.getItem("secondary") || "#BA770F",
+    background: window.localStorage.getItem("background") || "#FBF7F5",
+    good: window.localStorage.getItem("good") || "green",
+    bad: window.localStorage.getItem("bad") || "red",
     
 }
 

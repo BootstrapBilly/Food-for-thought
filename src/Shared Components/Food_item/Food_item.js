@@ -8,7 +8,13 @@ import VisibleSection from "./Components/Visible_section/Visible_section"
 import ExpandedSection from "./Components/Expanded_section/Expanded_section"
 import MiddleToggleSection from "./Components/Middle_toggle_section/Middle_toggle_section"
 
+//redux hooks
+import {useSelector} from "react-redux"
+
 export const Food_item = props => {
+
+    //?selectors
+    const contrast = useSelector(state => state.colour.contrast)
 
     //=Refs
     //the following refs are used to dynamically calculate the height of the total card, so when it is expanded, it can be animated smoothly without setting a predefined height
@@ -33,7 +39,7 @@ export const Food_item = props => {
 
     return (
 
-        <div className={classes.container} style={{ height: `${current_height}px` }}>
+        <div className={classes.container} style={{ height: `${current_height}px`, backgroundColor:contrast }}>
 
             <div className={classes.collapsed_section_wrapper} ref={collapsed_section}>
 

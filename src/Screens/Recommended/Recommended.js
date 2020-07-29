@@ -27,9 +27,7 @@ export const Recommended = () => {
         const searched_for_items = []
 
         if (!search_string && filters.length < 1) {
-
-            console.log("inside")
-
+            
             return set_items(food_items)
 
         }

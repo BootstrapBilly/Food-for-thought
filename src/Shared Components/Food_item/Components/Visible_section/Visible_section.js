@@ -9,7 +9,13 @@ import colours from '../../../../util/colours'
 //components
 import FavouriteButton from "./Components/Favourite_button"
 
+//redux hooks
+import {useSelector} from "react-redux"
+
 export const Visible_section = props => {
+
+    //?selectors
+    const primary = useSelector(state => state.colour.primary)
 
     return (
 
@@ -19,7 +25,7 @@ export const Visible_section = props => {
 
             <div className={classes.text_section}>
 
-                <span className={classes.title} style={{ color: colours.primary }}> {Capitalise(props.data.title)} </span>
+                <span className={classes.title} style={{ color: primary }}> {Capitalise(props.data.title)} </span>
 
                 <span className={classes.kcals}> {`Kcals : ${props.data.kcals}`} </span>
 

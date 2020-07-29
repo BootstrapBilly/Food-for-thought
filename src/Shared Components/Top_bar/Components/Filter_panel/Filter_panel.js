@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react'
 
 import classes from './Filter_panel.module.css'
 
-//util
-import colours from '../../../../util/colours'
-
 //external
 import { useSwipeable } from 'react-swipeable'
 
@@ -15,15 +12,16 @@ import FilterSquare from "./Components/Filter_square/Filter_square"
 import filter_blue from "../../../../Assets/Icon/filter-blue.svg"
 
 //redux hooks
-import {useSelector, useDispatch} from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 
 //redux action creators
-import {toggle_filter, clear_filters} from "../.././../../Store/Actions/1_handle_filters_action"
+import { toggle_filter, clear_filters } from "../.././../../Store/Actions/1_handle_filters_action"
 
 export const Filter_panel = props => {
 
     //?selectors
     const filters = useSelector(state => state.filters.filters)
+    const primary = useSelector(state => state.colour.primary)
 
     //-config
     const handlers = useSwipeable({//swipeable handler config from - https://github.com/FormidableLabs/react-swipeable
@@ -40,7 +38,7 @@ export const Filter_panel = props => {
     const [active_filters, set_active_filters] = useState([])
 
     //!effects
-    useEffect(()=> {
+    useEffect(() => {
 
         set_active_filters(filters)
 
@@ -48,15 +46,15 @@ export const Filter_panel = props => {
 
 
     //_functions
-    const handle_toggle = filter => {dispatch(toggle_filter(filter))}
+    const handle_toggle = filter => { dispatch(toggle_filter(filter)) }
 
     return (
 
         <React.Fragment>
 
-            <div {...handlers} className={[classes.container, props.open && classes.container_open].join(" ")} style={{ background: colours.white }}>
+            <div {...handlers} className={[classes.container, props.open && classes.container_open].join(" ")}>
 
-                <div className={classes.top_section} style={{ color: colours.primary }}>
+                <div className={classes.top_section} style={{ color: primary }}>
 
                     <div className={classes.top_section_top_row}>
 
@@ -67,6 +65,13 @@ export const Filter_panel = props => {
                     </div>
 
                     <div className={classes.top_section_bottom_row}><span className={classes.sub_title}>Select all which apply </span></div>
+
+                </div>
+
+                <div className={classes.button_container}>
+
+                    <div className={classes.reset_button} style={{ background: active_filters.length ? primary : "grey" }}
+                        onClick={() => active_filters.length && dispatch(clear_filters())}>Reset all filters</div>
 
                 </div>
 
@@ -86,8 +91,8 @@ export const Filter_panel = props => {
 
                 <div className={classes.button_container}>
 
-                    <div className={classes.reset_button} style={{background:active_filters.length ? colours.primary : "grey"}} 
-                    onClick={()=> active_filters.length && dispatch(clear_filters())}>Clear all filters</div>
+                    <div className={classes.close_button} style={{ border: `2px solid ${primary}`, color:primary}}
+                        onClick={props.handle_close}>Close This Menu</div>
 
                 </div>
 

@@ -7,13 +7,16 @@ import classes from './Nav_icon.module.css'
 import { Redirect } from "react-router-dom"
 
 //redux hooks
-import {useDispatch} from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 
 //redux action creators
-import {clear_filters} from "../../../Store/Actions/1_handle_filters_action"
-import {clear_search_string} from "../../../Store/Actions/2_handle_search_action"
+import { clear_filters } from "../../../Store/Actions/1_handle_filters_action"
+import { clear_search_string } from "../../../Store/Actions/2_handle_search_action"
 
 export const Nav_icon = props => {
+
+    //?selectors
+    const primary = useSelector(state => state.colour.primary)
 
     //-config
     const dispatch = useDispatch()//initialise the usedispatch hook
@@ -44,6 +47,7 @@ export const Nav_icon = props => {
                 src={require(`../../../Assets/Icon/${props.source}.svg`)}
                 alt={props.alt}
                 className={[classes.icon, active_icon === props.to && classes.active_icon].join(" ")}
+                style={{ backgroundColor:primary}}
 
             />
 

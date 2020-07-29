@@ -2,10 +2,13 @@ import React from 'react'
 
 import classes from './Rating.module.css'
 
-//util
-import colours from '../../../../../../util/colours'
+//redux hooks
+import { useSelector } from "react-redux"
 
 export const Rating = props => {
+
+    //?selectors
+    const primary = useSelector(state => state.colour.primary)
 
     return (
 
@@ -18,10 +21,10 @@ export const Rating = props => {
                 <div
                     key={index}
                     className={classes.circle}
-                    style={{ borderColor: colours.primary, backgroundColor: index < props.rating && colours.primary }}>
+                    style={{ borderColor: primary, backgroundColor: index < props.rating && primary }}>
 
                 </div>
-                
+
             )}
 
         </div>

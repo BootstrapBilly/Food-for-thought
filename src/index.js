@@ -10,12 +10,14 @@ import { Provider } from "react-redux"
 import request_reducer from "./Store/Reducers/0_send_request_reducer"
 import filters_reducer from "./Store/Reducers/1_handle_filters_reducer"
 import search_reducer from "./Store/Reducers/2_handle_search_reducer"
+import colour_change_reducer from "./Store/Reducers/3_handle_colour_change_reducer"
 
 const rootReducer = combineReducers({ //combine all the state reducers into one root reducer
 
   request: request_reducer,
   filters: filters_reducer,
-  search: search_reducer
+  search: search_reducer,
+  colour:colour_change_reducer
 
 })
 

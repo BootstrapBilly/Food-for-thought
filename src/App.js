@@ -6,7 +6,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom"
 //Components
 import Recommended from "./Screens/Recommended/Recommended"
 import Favourites from "./Screens/Favourites/Favourites"
-import Profile from "./Screens/Profile/Profile"
+import Accessibility from "./Screens/Accessibility/Accessibility"
 
 const App = () => {
 
@@ -18,12 +18,11 @@ const App = () => {
 
         <Route path="/" exact component={Recommended} />
         <Route path="/favourites" component={Favourites} />
-        <Route path="/accessibility" component={Profile} />
+        <Route path="/accessibility" component={Accessibility} />
 
       </Switch>
 
     </BrowserRouter>
-
 
   )
 

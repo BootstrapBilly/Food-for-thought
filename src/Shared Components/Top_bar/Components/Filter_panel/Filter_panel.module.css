@@ -6,6 +6,7 @@
     width: 75%;
     border-right: 0.5px solid rgba(128, 128, 128, 0.342);
     transition: left 0.2s ease-in-out;
+    background-color: #FBF7F5;
 }
 
 
@@ -70,10 +71,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
+    flex-direction: column;
 }
 
-.reset_button{
+.reset_button, .close_button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,4 +83,11 @@
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.close_button{
+    margin-top: 10px;
+    font-weight: 900;
 }
