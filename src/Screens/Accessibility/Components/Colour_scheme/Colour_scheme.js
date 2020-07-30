@@ -12,7 +12,7 @@ import ColorPicker from "./Components/colour_picker"
 import { useDispatch, useSelector } from "react-redux"
 
 //redux action creators
-import { handle_primary_change, handle_secondary_change, handle_contrast_change, handle_good_change, handle_bad_change } from '../../../../Store/Actions/3_handle_colour_change_action'
+import { handle_primary_change, handle_secondary_change, handle_contrast_change, handle_good_change, handle_bad_change, reset_colour_scheme } from '../../../../Store/Actions/3_handle_colour_change_action'
 
 
 export const Colour_scheme = () => {
@@ -69,11 +69,21 @@ export const Colour_scheme = () => {
 
     }
 
+    const handle_reset = () => {
+
+        window.localStorage.removeItem("primary")
+        window.localStorage.removeItem("contrast")
+        window.localStorage.removeItem("good")
+        window.localStorage.removeItem("bad")
+
+        dispatch(reset_colour_scheme())
+    }
+
     return (
 
         <div className={classes.container}>
 
-            {["primary", "secondary", "contrast", "good", "bad"].map(colour =>
+            {["primary", "contrast", "good", "bad"].map(colour =>
 
                 <div className={classes.colour_select_container}>
 
@@ -84,6 +94,8 @@ export const Colour_scheme = () => {
                 </div>
 
             )}
+
+            <div className={classes.reset_button} style={{backgroundColor:colours.primary, color:colours.contrast}} onClick={()=> handle_reset()}>Reset Colour Scheme</div>
 
             <ColorPicker
 

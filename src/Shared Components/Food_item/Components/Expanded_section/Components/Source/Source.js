@@ -2,9 +2,6 @@ import React from 'react'
 
 import classes from './Source.module.css'
 
-//util
-import colours from '../../../../../../util/colours'
-
 //redux hooks
 import {useSelector} from "react-redux"
 

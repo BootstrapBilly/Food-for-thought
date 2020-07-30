@@ -13,10 +13,5 @@
 .con{
     display: flex;
     margin-top: 10px;
-}
-
-.minus{
-    height: 20px;
-    width: 20px;
-    margin-right: 10px;
+    margin-left: 15px;
 }

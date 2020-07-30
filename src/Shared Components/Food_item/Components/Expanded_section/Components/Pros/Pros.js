@@ -2,21 +2,28 @@ import React from 'react'
 
 import classes from './Pros.module.css'
 
-import plus from "../../../../../../Assets/Icon/plus.svg"
+//components
+import Tooltip from "../../Components/Tooltip/Tooltip"
+
+//redux hooks
+import {useSelector} from "react-redux"
 
 export const Pros = props => {
+
+    const good = useSelector(state => state.colour.good)
 
     return (
 
         <div className={classes.container}>
 
-            <span className={classes.title}>Good :</span>
+            <span className={classes.title} style={{color:good}}>Good :</span>
 
             {props.data.map(pro => 
             
             <div key={pro} className={classes.pro}>
 
-                <img src={plus} alt="A plus icon" className={classes.plus}/>
+                <Tooltip good/>
+                
                 <span>{pro}</span>
 
             </div>

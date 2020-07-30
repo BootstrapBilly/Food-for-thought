@@ -2,21 +2,27 @@ import React from 'react'
 
 import classes from './Cons.module.css'
 
-import minus from "../../../../../../Assets/Icon/minus.svg"
+//components
+import Tooltip from "../Tooltip/Tooltip"
+
+//redux hooks
+import {useSelector} from "react-redux"
 
 export const Cons = props => {
+
+    const bad = useSelector(state => state.colour.bad)
 
     return (
 
         <div className={classes.container}>
 
-            <span className={classes.title}>Bad :</span>
+            <span className={classes.title} style={{color:bad}}>Bad :</span>
 
             {props.data.map(con =>
 
                 <div key={con} className={classes.con}>
 
-                    <img src={minus} alt="A minus icon" className={classes.minus} />
+                   <Tooltip bad />
                     <span>{con}</span>
 
                 </div>

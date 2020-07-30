@@ -4,7 +4,6 @@ import classes from './Visible_section.module.css'
 
 //util 
 import Capitalise from "../../../../util/capitalise_first"
-import colours from '../../../../util/colours'
 
 //components
 import FavouriteButton from "./Components/Favourite_button"

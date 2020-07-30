@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 //css
 import classes from './Nav_bar.module.css'

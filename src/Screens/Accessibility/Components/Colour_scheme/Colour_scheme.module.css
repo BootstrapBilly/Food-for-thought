@@ -38,3 +38,12 @@
     border: 2px solid grey;
     border-radius: 15px;
 }
+
+.reset_button{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-top: 20px;
+}
