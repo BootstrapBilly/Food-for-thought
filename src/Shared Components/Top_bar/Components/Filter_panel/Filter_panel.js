@@ -22,6 +22,7 @@ export const Filter_panel = props => {
     //?selectors
     const filters = useSelector(state => state.filters.filters)
     const primary = useSelector(state => state.colour.primary)
+    const font_size = useSelector(state => state.font.size)
 
     //-config
     const handlers = useSwipeable({//swipeable handler config from - https://github.com/FormidableLabs/react-swipeable
@@ -60,18 +61,18 @@ export const Filter_panel = props => {
 
                         <img src={filter_blue} alt={"A filters icon"} className={classes.filters_icon} onClick={props.handle_close} />
 
-                        <span className={classes.title}>Filters </span>
+                        <span className={classes.title} style={{fontSize: `${font_size* 1.2}px`}}>Filters </span>
 
                     </div>
 
-                    <div className={classes.top_section_bottom_row}><span className={classes.sub_title}>Select all which apply </span></div>
+                    <div className={classes.top_section_bottom_row}><span className={classes.sub_title} style={{fontSize: `${font_size* 0.87}px`}}>Select all which apply </span></div>
 
                 </div>
 
                 <div className={classes.button_container}>
 
-                    <div className={classes.reset_button} style={{ background: active_filters.length ? primary : "grey" }}
-                        onClick={() => active_filters.length && dispatch(clear_filters())}>Reset all filters</div>
+                    <div className={classes.reset_button} style={{ background: active_filters.length ? primary : "grey", fontSize: `${font_size* 0.8}px` }}
+                        onClick={() => active_filters.length && dispatch(clear_filters())} >Reset all filters</div>
 
                 </div>
 
@@ -91,7 +92,7 @@ export const Filter_panel = props => {
 
                 <div className={classes.button_container}>
 
-                    <div className={classes.close_button} style={{ border: `2px solid ${primary}`, color:primary}}
+                    <div className={classes.close_button} style={{ border: `2px solid ${primary}`, color:primary, fontSize: `${font_size* 0.8}px`}}
                         onClick={props.handle_close}>Close This Menu</div>
 
                 </div>

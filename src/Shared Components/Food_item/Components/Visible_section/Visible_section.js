@@ -15,6 +15,7 @@ export const Visible_section = props => {
 
     //?selectors
     const primary = useSelector(state => state.colour.primary)
+    const font_size = useSelector(state => state.font.size)
 
     return (
 
@@ -24,9 +25,9 @@ export const Visible_section = props => {
 
             <div className={classes.text_section}>
 
-                <span className={classes.title} style={{ color: primary }}> {Capitalise(props.data.title)} </span>
+                <span className={classes.title} style={{ color: primary, fontSize: `${font_size * 1.1}px` }}> {Capitalise(props.data.title)} </span>
 
-                <span className={classes.kcals}> {`Kcals : ${props.data.kcals}`} </span>
+                <span className={classes.kcals} style={{ fontSize: `${font_size * 0.85}px` }}> {`Kcals : ${props.data.kcals}`} </span>
 
             </div>
 

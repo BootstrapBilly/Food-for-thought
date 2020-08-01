@@ -2,7 +2,7 @@ const food_items = [
 
     {
 
-        title: "avocado",
+        title: "Avocado",
         thumbnail: require("../Assets/Food_images/avocado.jpg"),
         rating: 3,
         kcals: 322,
@@ -15,7 +15,7 @@ const food_items = [
 
     {
 
-        title: "egg",
+        title: "Egg",
         thumbnail: require("../Assets/Food_images/egg.jpg"),
         rating: 4,
         kcals: 63,
@@ -28,7 +28,7 @@ const food_items = [
 
     {
 
-        title: "oats - 50g",
+        title: "Oats",
         thumbnail: require("../Assets/Food_images/oats.jpg"),
         rating: 5,
         kcals: 195,
@@ -41,7 +41,7 @@ const food_items = [
 
     {
 
-        title: "Almonds - 25g",
+        title: "Almonds",
         thumbnail: require("../Assets/Food_images/almonds.jpg"),
         rating: 4,
         kcals: 143,
@@ -54,7 +54,7 @@ const food_items = [
 
     {
 
-        title: "Tuna - 1 can",
+        title: "Tuna",
         thumbnail: require("../Assets/Food_images/tuna.jpg"),
         rating: 3,
         kcals: 191,
@@ -68,7 +68,7 @@ const food_items = [
 
     {
 
-        title: "Salmon 1/2 fillet",
+        title: "Salmon",
         thumbnail: require("../Assets/Food_images/salmon.jpg"),
         rating: 4,
         kcals: 367,
@@ -81,7 +81,7 @@ const food_items = [
 
     {
 
-        title: "Beef liver - 100g",
+        title: "Beef liver",
         thumbnail: require("../Assets/Food_images/liver.jpg"),
         rating: 5,
         kcals: 191,

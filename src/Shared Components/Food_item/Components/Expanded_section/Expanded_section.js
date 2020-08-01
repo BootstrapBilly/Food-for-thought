@@ -8,17 +8,18 @@ import Pros from "./Components/Pros/Pros"
 import Cons from "./Components/Cons/Cons"
 import Source from "./Components/Source/Source"
 
+
 export const Expanded_section = props => {
 
     return (
 
         <div className={classes.container}>
-            
-            <Rating rating={props.data.rating}/>
+
+            <Rating rating={props.data.rating} />
 
             <Pros data={props.data.pros} />
 
-            <Cons data={props.data.cons}/>
+            <Cons data={props.data.cons} />
 
             <Source source={props.data.source} />
 

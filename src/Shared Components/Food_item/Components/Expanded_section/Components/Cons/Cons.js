@@ -10,20 +10,22 @@ import {useSelector} from "react-redux"
 
 export const Cons = props => {
 
+    //?selectors
     const bad = useSelector(state => state.colour.bad)
+    const font_size = useSelector(state => state.font.size)
 
     return (
 
         <div className={classes.container}>
 
-            <span className={classes.title} style={{color:bad}}>Bad :</span>
+            <span className={classes.title} style={{color:bad, fontSize:`${font_size * 1}px`}}>Bad :</span>
 
             {props.data.map(con =>
 
                 <div key={con} className={classes.con}>
 
                    <Tooltip bad />
-                    <span>{con}</span>
+                    <span style={{fontSize:`${font_size * 0.8}px`}}>{con}</span>
 
                 </div>
 

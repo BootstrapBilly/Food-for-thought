@@ -10,6 +10,7 @@ export const Filter_square = props => {
     //?selectors
     const primary = useSelector(state => state.colour.primary)
     const contrast = useSelector(state => state.colour.contrast)
+    const font_size = useSelector(state => state.font.size)
 
     //-config
     const is_active = props.active_filters.find(filter => filter === props.details.name)
@@ -26,7 +27,7 @@ export const Filter_square = props => {
                 alt={`${props.details.name} filter icon`}
                 className={classes.icon} />
 
-            <span style={{ color: is_active && contrast, marginTop:"5px", zIndex:"2" }}>{props.details.name}</span>
+            <span style={{ color: is_active && contrast, marginTop:"5px", zIndex:"2", fontSize: `${font_size* 0.8}px`}}>{props.details.name}</span>
 
         </div>
 

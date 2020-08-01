@@ -38,7 +38,6 @@ export const Font_size = () => {
         window.localStorage.setItem("size", size)
         dispatch(set_font_scale(name, size))
 
-
     }
 
     return (

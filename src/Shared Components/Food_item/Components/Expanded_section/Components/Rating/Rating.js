@@ -9,12 +9,13 @@ export const Rating = props => {
 
     //?selectors
     const primary = useSelector(state => state.colour.primary)
+    const font_size = useSelector(state => state.font.size)
 
     return (
 
         <div className={classes.container}>
 
-            Our Rating :
+            <span style={{fontSize:`${font_size * 1}px`}}>Our Rating :</span>
 
             {[0, 1, 2, 3, 4].map((circle, index) =>
 

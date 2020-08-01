@@ -5,7 +5,7 @@
     box-shadow: 1px 1px 3px 1px rgba(128, 128, 128, 0.315);
     padding: 5px;
     margin-top: 50px;
-    width: 295px;
+    width: 275px;
     transition: height 0.5s ease-in-out;
     animation: fade-in 0.5s forwards;
     animation-delay: 0.3s;

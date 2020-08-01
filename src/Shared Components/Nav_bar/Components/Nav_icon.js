@@ -17,6 +17,7 @@ export const Nav_icon = props => {
 
     //?selectors
     const primary = useSelector(state => state.colour.primary)
+    const font_size = useSelector(state => state.font.size)
 
     //-config
     const dispatch = useDispatch()//initialise the usedispatch hook
@@ -51,7 +52,7 @@ export const Nav_icon = props => {
 
             />
 
-            <span className={[classes.text, active_icon === props.to && classes.active_text].join(" ")}>{props.text}</span>
+            <span className={[classes.text, active_icon === props.to && classes.active_text].join(" ")} style={{fontSize:`${font_size * 0.8}px`}}>{props.text}</span>
 
             {/*Whenever the redirect state at the top is set, redirect becomes truish and the component is rendered, which redirects to the desired route. The state is set by clicking an icon on the icon bar */
 
