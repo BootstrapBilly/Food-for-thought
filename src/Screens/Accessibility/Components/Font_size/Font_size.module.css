@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-direction: column;
+    height: 300px;
+    justify-content: space-evenly;
+}
+
+.title{
+    margin-bottom: 5px;
+}
+
+.link{
+    padding: 5px 20px;
+}
+
+.small{
+    font-size: 14px;
+}
+
+.medium{
+    font-size: 17px;
+}
+
+.large{
+    font-size: 20px;
+}
+
+.very_large{
+    font-size: 25px;
+}
