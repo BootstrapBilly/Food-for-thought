@@ -16,10 +16,15 @@ import { send_request } from "../../Store/Actions/0_send_request_action"
 //components
 import FoodItem from "../../Shared Components/Food_item/Food_item"
 
+//functions
+import handle_food_filters from "../../util/handle_food_filters"
+
 export const Favourites = () => {
 
     //?selectors
     const response = useSelector(state => state.request.response)//grab the response from the api
+    const filters = useSelector(state => state.filters.filters)
+    const search_string = useSelector(state => state.search.search_string)
 
     //*states
     const [favourites, set_favourites] = useState([])//hold the list of favourites(set by the response from the api (line37) )
@@ -38,7 +43,7 @@ export const Favourites = () => {
             dispatch(send_request({}, "get_favourites", "get"))//fetch them again to display favourites without the removed one
 
         }
-    // eslint-disable-next-line
+        // eslint-disable-next-line
     }, [response])//Whenever the response changes
 
     useEffect(() => {
@@ -52,11 +57,17 @@ export const Favourites = () => {
         // eslint-disable-next-line
     }, [response])//re-run the effect whenever the response change
 
+    useEffect(() => {
+
+        handle_food_filters(filters, search_string, favourites, set_favourites)
+
+    }, [filters, search_string])
+
     return (
 
         <div className={classes.container}>
 
-            <TopBar page={"Favourites"}/>
+            <TopBar page={"Favourites"} />
 
             {favourites.map((food_item, index) => <FoodItem data={food_item} key={index} />)}
 

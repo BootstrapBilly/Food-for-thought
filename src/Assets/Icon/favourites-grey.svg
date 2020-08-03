@@ -13,7 +13,7 @@
    class=""
    version="1.1"
    id="svg12"
-   sodipodi:docname="favourites.svg"
+   sodipodi:docname="favourites-grey.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
   <metadata
      id="metadata18">
@@ -23,6 +23,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -54,7 +55,7 @@
        inkscape:connector-curvature="0"
        id="path4"
        data-old_color="#fff16b"
-       style="fill:#ff7d47;fill-opacity:1;stroke-width:1.23784375"
+       style="fill:#808080;fill-opacity:1;stroke-width:1.23784375"
        class=""
        data-original="#FFF16B"
        d="M 67.086786,115.76129 32.494242,128.40016 33.504163,90.691803 11.116152,60.795386 46.331505,50.128939 67.086786,19.012927 l 20.75528,31.116012 35.215364,10.666447 -22.38802,29.896417 1.00993,37.708357 z" />
@@ -62,7 +63,7 @@
        inkscape:connector-curvature="0"
        id="path6"
        data-old_color="#ff7d47"
-       style="fill:#fff16b;fill-opacity:1;stroke-width:1.23784375"
+       style="fill:#c8c8c8;fill-opacity:1;stroke-width:1.23784375"
        class="active-path"
        data-original="#FF7D47"
        d="M 67.086786,101.30178 46.281436,108.90292 46.889587,86.223713 33.424786,68.243454 54.60382,61.828028 67.086786,43.113751 79.569754,61.828028 100.7488,68.243454 87.283986,86.223713 87.892134,108.90292 Z" />

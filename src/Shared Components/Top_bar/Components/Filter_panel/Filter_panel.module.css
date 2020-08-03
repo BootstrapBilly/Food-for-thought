@@ -6,7 +6,8 @@
     width: 75%;
     border-right: 0.5px solid rgba(128, 128, 128, 0.342);
     transition: left 0.2s ease-in-out;
-    background-color: #FBF7F5;
+    background-color: #DDDDDD;
+    z-index: 10;
 }
 
 

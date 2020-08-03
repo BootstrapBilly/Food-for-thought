@@ -16,6 +16,7 @@ export const Search_input = props => {
     //?selectors
     const search_string = useSelector(state => state.search.search_string)
     const font_size = useSelector(state => state.font.size)
+    const primary = useSelector(state => state.colour.primary)
 
     //-config
     const dispatch = useDispatch()
@@ -48,6 +49,7 @@ export const Search_input = props => {
                     autoFocus
                     onChange={e => dispatch(set_search_string(e.target.value))}
                     value={search_string}
+                    style={{borderColor:primary, color:primary}}
 
                 />
                 
@@ -56,7 +58,7 @@ export const Search_input = props => {
             <div className={[classes.icon_container, props.search_expanded && classes.icon_container_expanded].join(" ")} onClick={() => handle_expand_search()}>
 
                 <img src={Search} alt="Search for food icon icon" className={[classes.search_icon, props.search_expanded && classes.search_icon_expanded].join(" ")} />
-                <span className={classes.search_caption} style={{fontSize: `${font_size*0.7}px` }}>{props.search_expanded ? "Close" : "Search"}</span>
+                <span className={classes.search_caption} style={{fontSize: `${font_size*0.7}px`, color: primary }}>{props.search_expanded ? "Close" : "Search"}</span>
 
             </div>
 

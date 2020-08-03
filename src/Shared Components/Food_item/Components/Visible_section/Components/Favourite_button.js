@@ -28,13 +28,14 @@ export const Favourite_button = props => {
     // eslint-disable-next-line
     useEffect(() => { dispatch(send_request({}, "get_favourites", "get")) }, [])//only on the first render, fetch all favourites from the database to see if this item is favourites
 
+
     useEffect(() => {
 
         if (response && response.data.message === "Favourites retrieved") {//if favourites have been retrieved
 
             response.data.favourites.forEach(favourite => {//loop through them
 
-                if (favourite.title === props.data.title) {//checking if this food item is inside (meaning its favourited)
+                if (favourite.title.toLowerCase() === props.data.title.toLowerCase()) {//checking if this food item is inside (meaning its favourited)
 
                     set_is_favourited(true)//if it is, set the state to true, meaning the icon will change to the active one
 
@@ -51,7 +52,7 @@ export const Favourite_button = props => {
         if (show_animation) {
 
             setTimeout(() => {//after .5s
-                
+
                 set_show_animation(false)//set the state to false (which removes the animated class)
 
             }, 500);
@@ -67,7 +68,10 @@ export const Favourite_button = props => {
 
         dispatch(send_request(props.data, "toggle_favourite"))//add or remove the favourite from the database
 
-        set_is_favourited(!is_favourited)//update the state so that the icon changes to the correct one
+        if (window.location.href.includes("/favourites")) return
+
+        else set_is_favourited(!is_favourited)//update the state so that the icon changes to the correct one
+
 
     }
 

@@ -11,12 +11,11 @@ import { useSelector } from "react-redux"
 
 export const Nav_bar = () => {
 
-    //?selectors
-    const primary_colour = useSelector(state => state.colour.primary)
+
 
     return (
 
-        <div className={classes.container} style={{ background: primary_colour }}>
+        <div className={classes.container}>
 
             <NavIcon
 
@@ -41,7 +40,7 @@ export const Nav_bar = () => {
                 to={"/accessibility"}
                 text={"Accessiblity"}
                 alt={"A navigation icon to leading to the Accessibility page"}
-                source="profile"
+                source="accessibility"
 
             />
 

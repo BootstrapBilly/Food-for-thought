@@ -6,27 +6,33 @@
     text-align: center;
     width: 100%;
     font-weight: bold;
-    color: white;
 }
 
 .icon {
     height: 40px;
     width: 40px;
     margin-bottom: 2px;
-    transition: transform 0.15s ease-in-out;
 }
 
-.active_icon{
-    transform: scale(1.5);
+.animated_icon {
+    animation: bounce .09s infinite alternate;
+    -webkit-animation: bounce .09s infinite alternate;
     position: relative;
-    bottom: 10px;
-    padding: 5px;
-    padding-top: 5px;
-    padding-bottom: 0;
-    border-radius: 40px;
-    transition: transform 0.15s ease-in-out;
 }
 
-.active_text{
-    margin-bottom: 5px;
-}
+@keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-10px);
+    }
+  }

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import classes from './Top_bar.module.css'
 
 //assets
-import Filter from "../../Assets/Icon/filter.svg"
+import Filter from "../../Assets/Icon/filter-blue.svg"
 
 //components
 import FilterPanel from "./Components/Filter_panel/Filter_panel"
@@ -24,7 +24,7 @@ export const Top_bar = props => {
 
     return (
 
-        <div className={classes.container} style={{ background: primary }}>
+        <div className={classes.container} style={{color:primary}}>
 
             {!props.no_icons &&
 
@@ -33,7 +33,7 @@ export const Top_bar = props => {
                     <div className={classes.filter_container} onClick={() => set_panel_open(true)}>
 
                         <img src={Filter} alt="Filter food types icon" className={classes.filter_icon} />
-                        <span className={classes.filter_caption} style={{ fontSize: `${font_size * 0.7}px` }}>Filters</span>
+                        <span className={classes.filter_caption} style={{ fontSize: `${font_size * 0.65}px`, color:primary }}>Filters</span>
 
                     </div>
 

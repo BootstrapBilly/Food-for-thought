@@ -26,16 +26,37 @@ export const Nav_icon = props => {
     //*states
     const [redirect, set_redirect] = useState(null)//this state does nothing until it is set, then when it is, it triggers the redirect (set by clicking an icon)
     const [active_icon, set_active_icon] = useState(null)//determines the currently active icon (to make it poke out of the bar at the bottom)
+    const [show_animation, set_show_animation] = useState(false)
 
     //!effects
     useEffect(() => { set_active_icon(url) }, [url])//whenever the url changes, set the icon to match so it is active
 
+    useEffect(() => {//this effect is used to clean up the subscription to the bounce animation state after it has been played
+
+        if (show_animation) {
+
+            setTimeout(() => {
+
+                set_show_animation(false)
+
+            }, 150);
+
+        }
+    }, [show_animation])
+
+
     //_functions
     const handle_redirect = () => {
 
-        dispatch(clear_filters())//clear any active filters before navigating
-        dispatch(clear_search_string())//clear the search string before navigating
-        set_redirect(props.to)//redirect them to their desired page
+        set_show_animation(true)//set the show animation state to true, so the icon will bounce when selected
+
+        setTimeout(() => {//dont redirect until after 0.3s, so the icon can do its animation
+
+            dispatch(clear_filters())//clear any active filters before navigating
+            dispatch(clear_search_string())//clear the search string before navigating
+            set_redirect(props.to)//redirect them to their desired page
+
+        }, 150);
 
     }
 
@@ -45,14 +66,13 @@ export const Nav_icon = props => {
 
             <img
 
-                src={require(`../../../Assets/Icon/${props.source}.svg`)}
+                src={require(`../../../Assets/Icon/${active_icon !== props.to ? props.source + "-grey" : props.source}.svg`)}
                 alt={props.alt}
-                className={[classes.icon, active_icon === props.to && classes.active_icon].join(" ")}
-                style={{ backgroundColor:primary}}
+                className={[classes.icon, show_animation && classes.animated_icon].join(" ")}
 
             />
 
-            <span className={[classes.text, active_icon === props.to && classes.active_text].join(" ")} style={{fontSize:`${font_size * 0.8}px`}}>{props.text}</span>
+            <span className={[classes.text, active_icon === props.to && classes.active_text].join(" ")} style={{ fontSize: `${font_size * 0.7}px`, color: primary }}>{props.text}</span>
 
             {/*Whenever the redirect state at the top is set, redirect becomes truish and the component is rendered, which redirects to the desired route. The state is set by clicking an icon on the icon bar */
 
