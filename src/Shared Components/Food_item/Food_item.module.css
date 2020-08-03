@@ -13,6 +13,11 @@
     border-radius: 5px;
 }
 
+.container_animated{
+    animation: none;
+  height: 500px;
+}
+
 @keyframes fade-in {
     0% {
         opacity: 0;

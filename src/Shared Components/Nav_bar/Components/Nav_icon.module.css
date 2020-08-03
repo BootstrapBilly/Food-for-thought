@@ -15,8 +15,8 @@
 }
 
 .animated_icon {
-    animation: bounce .09s infinite alternate;
-    -webkit-animation: bounce .09s infinite alternate;
+    animation: bounce .12s infinite alternate;
+    -webkit-animation: bounce .12s infinite alternate;
     position: relative;
 }
 

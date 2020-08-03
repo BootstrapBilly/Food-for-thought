@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title{
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.option_wrapper{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+

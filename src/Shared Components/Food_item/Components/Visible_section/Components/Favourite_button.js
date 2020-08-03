@@ -64,6 +64,7 @@ export const Favourite_button = props => {
     //_functions
     const handle_toggle_favourite = () => {//this function is called whenever the user clicks the favourite icon
 
+
         if (!is_favourited) set_show_animation(true)//set the show animation state to add the animated class to the icon
 
         dispatch(send_request(props.data, "toggle_favourite"))//add or remove the favourite from the database

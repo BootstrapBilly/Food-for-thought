@@ -4,6 +4,7 @@ import classes from './Expanded_section.module.css'
 
 //components
 import Rating from "./Components/Rating/Rating"
+import Portion_toggle from "./Components/Portion_toggle/Portion_toggle"
 import Pros from "./Components/Pros/Pros"
 import Cons from "./Components/Cons/Cons"
 import Source from "./Components/Source/Source"
@@ -14,6 +15,8 @@ export const Expanded_section = props => {
     return (
 
         <div className={classes.container}>
+
+            <Portion_toggle toggle_options={props.data.toggle_options} default_portion={props.data.default_portion} title={props.data.title}/>
 
             <Rating rating={props.data.rating} />
 

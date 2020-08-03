@@ -43,7 +43,7 @@ export const Food_item = props => {
 
             <div className={classes.collapsed_section_wrapper} ref={collapsed_section}>
 
-                <VisibleSection data={props.data} />
+                <VisibleSection data={props.data}/>
 
             </div>
 
