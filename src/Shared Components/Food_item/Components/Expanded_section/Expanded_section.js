@@ -16,7 +16,7 @@ export const Expanded_section = props => {
 
         <div className={classes.container}>
 
-            <PortionToggle toggle_options={props.data.toggle_options} default_portion={props.data.default_portion} title={props.data.title}/>
+            <PortionToggle toggle_options={props.data.toggle_options} default_portion={props.data.default_portion} title={props.data.title} data={props.data}/>
 
             <Rating rating={props.data.rating} />
 

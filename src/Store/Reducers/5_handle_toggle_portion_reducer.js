@@ -10,7 +10,7 @@ const handle_kcal_re_render = (state = initialState, action) => {
 
     switch (action.type) {
 
-        case SET_KCAL_RENDER_FLAG: return { ...state, re_render_flag:true }
+        case SET_KCAL_RENDER_FLAG: return { ...state, re_render_flag:true}
         case CLEAR_FLAG: return { ...state, re_render_flag:false }
 
         default:
