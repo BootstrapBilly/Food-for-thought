@@ -9,7 +9,7 @@ import { useSelector } from "react-redux"
 export const Option = props => {
 
     //?selectors
-    const contrast = useSelector(state => state.colour.contrast)
+    const contrast = useSelector(state => state.colour.contrast)//grab the contrast colour from redux
 
     return (
 

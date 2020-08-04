@@ -14,27 +14,16 @@ import {useSelector} from "react-redux"
 const Colour_picker = props => {
 
     //?selectors
-    const primary = useSelector(state => state.colour.primary)
+    // eslint-disable-next-line
+    const primary = useSelector(state => state.colour.primary)//grab the colours from redux
+    // eslint-disable-next-line
     const secondary = useSelector(state => state.colour.secondary)
     const contrast = useSelector(state => state.colour.contrast)
     const good = useSelector(state => state.colour.good)
     const bad = useSelector(state => state.colour.bad)
 
-    //-config
-    const colours = {
-
-        primary:primary,
-        secondary:secondary,
-        contrast:contrast,
-        good:good,
-        bad:bad
-
-    }
-
-    const handle_colour_selection = (colour, event) => {
-
-        props.handle_colour_select(colour, event)
-    }
+    //call the props function which updates the colour in redux and local storage
+    const handle_colour_selection = (colour, event) => {props.handle_colour_select(colour, event)}
 
     return (
 
@@ -47,16 +36,20 @@ const Colour_picker = props => {
 
                     <span className={classes.title}>Selecting : 
                     
-                        <span style={{color: props.new_colour ? props.new_colour.hex : colours[props.active_colour_picker]}}> {capitalizeFirstChar(props.active_colour_picker)}</span>
+                        <span style={{color: props.new_colour ? props.new_colour.hex : 
+                            // eslint-disable-next-line
+                            eval(props.active_colour_picker)}}> {capitalizeFirstChar(props.active_colour_picker)}</span>
                     
                     </span>
 
-                    <SketchPicker color={props.new_colour ? props.new_colour : colours[props.active_colour_picker]} onChange={(colour, event) => handle_colour_selection(colour, event)} />
+                    <SketchPicker color={props.new_colour ? props.new_colour :
+                        // eslint-disable-next-line
+                        eval(props.active_colour_picker)} onChange={(colour, event) => handle_colour_selection(colour, event)} />
 
                     <div className={classes.button_container}>
 
-                        <div className={classes.button} style={{ background:colours.bad, color: colours.contrast }} onClick={props.handle_cancel}>Cancel</div>
-                        <div className={classes.button} style={{ background:colours.good, color: colours.contrast }} onClick={props.handle_save}>Save</div>
+                        <div className={classes.button} style={{ background:bad, color: contrast }} onClick={props.handle_cancel}>Cancel</div>
+                        <div className={classes.button} style={{ background:good, color: contrast }} onClick={props.handle_save}>Save</div>
 
                     </div>
 

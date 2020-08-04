@@ -10,6 +10,7 @@ import {useSelector, useDispatch} from "react-redux"
 
 //redux action creators
 import {set_search_string} from "../../../../Store/Actions/2_handle_search_action"
+import { set_collapse_flag } from '../../../../Store/Actions/6_handle_collapse_food_items_action'
 
 export const Search_input = props => {
 
@@ -32,7 +33,14 @@ export const Search_input = props => {
 
         props.handle_expand_search()
         set_input_active(!input_active)
+        if(input_active) dispatch(set_search_string(""))
 
+    }
+
+    const handle_input = e => {
+
+        dispatch(set_search_string(e.target.value))
+        dispatch(set_collapse_flag())
     }
 
     return (
@@ -47,7 +55,7 @@ export const Search_input = props => {
                     className={classes.input}
                     placeholder={"Search for some food"}
                     autoFocus
-                    onChange={e => dispatch(set_search_string(e.target.value))}
+                    onChange={e => handle_input(e)}
                     value={search_string}
                     style={{borderColor:primary, color:primary}}
 

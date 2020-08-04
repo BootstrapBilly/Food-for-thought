@@ -19,6 +19,9 @@ import FoodItem from "../../Shared Components/Food_item/Food_item"
 //functions
 import handle_food_filters from "../../util/handle_food_filters"
 
+//assets
+import empty from "../../Assets/Graphics/empty.svg"
+
 export const Favourites = () => {
 
     //?selectors
@@ -59,8 +62,12 @@ export const Favourites = () => {
 
     useEffect(() => {
 
-        handle_food_filters(filters, search_string, favourites, set_favourites)
+        if (response && response.data.message === "Favourites retrieved") {
 
+            handle_food_filters(filters, search_string, favourites, set_favourites, response)
+
+        }
+        // eslint-disable-next-line 
     }, [filters, search_string])
 
     return (
@@ -69,7 +76,20 @@ export const Favourites = () => {
 
             <TopBar page={"Favourites"} />
 
-            {favourites.map((food_item, index) => <FoodItem data={food_item} key={index} />)}
+            {!favourites.length ?
+
+                <div className={classes.empty_prompt_container}>
+
+                    <span className={classes.empty_text}>You have no favourites, add some from the food ideas page !</span>
+                    <img src={empty} alt="Empty favourites graphic" className={classes.empty_graphic} />
+
+                </div>
+
+                : favourites.map((food_item, index) => <FoodItem data={food_item} key={index} />)
+
+            }
+
+
 
             <NavBar />
 

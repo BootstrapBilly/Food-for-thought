@@ -6,12 +6,7 @@ import classes from './Nav_bar.module.css'
 //components
 import NavIcon from "./Components/Nav_icon"
 
-//redux hooks
-import { useSelector } from "react-redux"
-
 export const Nav_bar = () => {
-
-
 
     return (
 

@@ -5,3 +5,25 @@
     padding-top: 30px;
     padding-bottom: 110px;
 }
+
+.empty_prompt_container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -25px;
+}
+
+.empty_graphic{
+    width: 300px;
+    height: 300px;
+
+}
+
+.empty_text{
+
+    text-align: center;
+    width: 200px;
+}

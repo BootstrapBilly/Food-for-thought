@@ -13,15 +13,17 @@ import search_reducer from "./Store/Reducers/2_handle_search_reducer"
 import colour_change_reducer from "./Store/Reducers/3_handle_colour_change_reducer"
 import font_scale_reducer from "./Store/Reducers/4_handle_font_scale_reducer"
 import toggle_portion_reducer from "./Store/Reducers/5_handle_toggle_portion_reducer"
+import collapse_reducer from "./Store/Reducers/6_handle_collapse_food_items_reducer"
 
 const rootReducer = combineReducers({ //combine all the state reducers into one root reducer
 
   request: request_reducer,
   filters: filters_reducer,
   search: search_reducer,
-  colour:colour_change_reducer,
+  colour: colour_change_reducer,
   font: font_scale_reducer,
-  portion:toggle_portion_reducer
+  portion: toggle_portion_reducer,
+  collapse: collapse_reducer
 
 })
 

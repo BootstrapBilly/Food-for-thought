@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 import classes from './Toggle_option.module.css'
 
@@ -11,19 +11,9 @@ import capitalizeFirstChar from '../../../../../../../util/capitalise_first'
 export const Toggle_option = props => {
 
     //?selectors
-    const primary = useSelector(state => state.colour.primary)
+    const primary = useSelector(state => state.colour.primary)//grab the colours from redux
     const contrast = useSelector(state => state.colour.contrast)
-
-    //*states
-    const [active_size, set_active_size] = useState(props.default_portion)
-
-    //!effects
-    useEffect(() => {
-
-        if (props.active_portion) {
-            set_active_size(props.active_portion)
-        }
-    }, [props.active_portion])
+    const font_size = useSelector(state => state.font.size)//grab the current font size from redux
 
     return (
 
@@ -32,8 +22,9 @@ export const Toggle_option = props => {
             style={{
 
                 border: `1px solid ${primary}`,
-                color: active_size === props.option.text ? contrast : primary,
-                backgroundColor: active_size === props.option.text && primary
+                color: props.active_portion === props.option.text ? contrast : primary,
+                backgroundColor: props.active_portion === props.option.text && primary,
+                fontSize: font_size * 0.75 + "px"
 
             }}
 

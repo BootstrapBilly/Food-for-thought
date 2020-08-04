@@ -3,7 +3,7 @@ const food_items = [
     {
 
         title: "Avocado",
-        thumbnail: require("../Assets/Food_images/avocado.jpg"),
+        thumbnail: "avocado",
         rating: 3,
         kcals: 322,
         source: "https://nutritiondata.self.com/facts/fruits-and-fruit-juices/1843/2",
@@ -18,7 +18,7 @@ const food_items = [
     {
 
         title: "Egg",
-        thumbnail: require("../Assets/Food_images/egg.jpg"),
+        thumbnail: "egg",
         rating: 4,
         kcals: 63,
         source: "https://nutritiondata.self.com/facts/dairy-and-egg-products/111/2",
@@ -33,7 +33,7 @@ const food_items = [
     {
 
         title: "Oats",
-        thumbnail: require("../Assets/Food_images/oats.jpg"),
+        thumbnail: "oats",
         rating: 5,
         kcals: 195,
         source: "https://nutritiondata.self.com/facts/cereal-grains-and-pasta/5708/2",
@@ -48,7 +48,7 @@ const food_items = [
     {
 
         title: "Almonds",
-        thumbnail: require("../Assets/Food_images/almonds.jpg"),
+        thumbnail: "almonds",
         rating: 4,
         kcals: 143,
         source: "https://nutritiondata.self.com/facts/nut-and-seed-products/3085/2",
@@ -63,7 +63,7 @@ const food_items = [
     {
 
         title: "Tinned Tuna",
-        thumbnail: require("../Assets/Food_images/tuna.jpg"),
+        thumbnail: "tuna",
         rating: 3,
         kcals: 191,
         source: "https://nutritiondata.self.com/facts/finfish-and-shellfish-products/4206/2",
@@ -79,7 +79,7 @@ const food_items = [
     {
 
         title: "Salmon Fillet",
-        thumbnail: require("../Assets/Food_images/salmon.jpg"),
+        thumbnail: "salmon",
         rating: 4,
         kcals: 367,
         source: "https://nutritiondata.self.com/facts/finfish-and-shellfish-products/4259/2",
@@ -94,7 +94,7 @@ const food_items = [
     {
 
         title: "Beef liver",
-        thumbnail: require("../Assets/Food_images/liver.jpg"),
+        thumbnail: "liver",
         rating: 5,
         kcals: 191,
         source: "https://nutritiondata.self.com/facts/beef-products/3469/2",

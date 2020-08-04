@@ -14,29 +14,27 @@ import capitalizeFirstChar from '../../../../util/capitalise_first'
 export const Font_size = () => {
 
     //-config
-    const dispatch = useDispatch()
+    const dispatch = useDispatch()//initialise the usedispatch hook
 
     //?selectors
-    const font_size = useSelector(state => state.font.size)
-    const font_size_name = useSelector(state => state.font.name)
-    const primary = useSelector(state => state.colour.primary)
-    const contrast = useSelector(state => state.colour.contrast)
+    const font_size = useSelector(state => state.font.size)//grab the current font size from redux
+    const font_size_name = useSelector(state => state.font.name)//grab the current font size name (used to highlight the currently selected one )
+    const primary = useSelector(state => state.colour.primary)//grab the primary colour from redux
+    const contrast = useSelector(state => state.colour.contrast)//grab the secondary colour from redux
 
     //*states
-    const [active, set_active] = useState(font_size_name)
+    const [active, set_active] = useState(font_size_name)//sets the highlighted (active) font size
 
     //!effects
-    useEffect(()=> {
-
-        set_active(font_size_name)
-
-    },[font_size_name])
+    //this effect is used to change the highlighted font size when a new one has been selected
+    useEffect(()=> {set_active(font_size_name)},[font_size_name])
 
     const handle_font_size_change = (name, size) => {
         
-        window.localStorage.setItem("name", name)
-        window.localStorage.setItem("size", size)
-        dispatch(set_font_scale(name, size))
+        window.localStorage.setItem("name", name)//save the new font size name to localstorage (So it can be fetched upon page render to highlight the correct font size option)
+        window.localStorage.setItem("size", size)//save the font size to local storage so it can be fetched by redux to scale the app
+
+        dispatch(set_font_scale(name, size))//overwrite the new font scale in redux to update the rest of the app
 
     }
 
@@ -52,6 +50,7 @@ export const Font_size = () => {
                 ["large", "20"],
                 ["very_large", "24"]
             ]
+            
             .map(size =>
 
                     <span className={[classes[size[0]], classes.link].join(" ")}

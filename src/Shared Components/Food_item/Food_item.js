@@ -9,12 +9,19 @@ import ExpandedSection from "./Components/Expanded_section/Expanded_section"
 import MiddleToggleSection from "./Components/Middle_toggle_section/Middle_toggle_section"
 
 //redux hooks
-import {useSelector} from "react-redux"
+import {useSelector, useDispatch} from "react-redux"
+
+//redux action creators
+import {clear_collapse_flag} from "../../Store/Actions/6_handle_collapse_food_items_action"
 
 export const Food_item = props => {
 
+    //-config
+    const dispatch = useDispatch()
+
     //?selectors
     const contrast = useSelector(state => state.colour.contrast)
+    const collapse_flag = useSelector(state => state.collapse.collapse_flag)
 
     //=Refs
     //the following refs are used to dynamically calculate the height of the total card, so when it is expanded, it can be animated smoothly without setting a predefined height
@@ -36,6 +43,15 @@ export const Food_item = props => {
         else set_current_height(collapsed_section.current.clientHeight)
 
     }, [expanded])
+
+    useEffect(()=> {
+
+        if(collapse_flag){
+            set_expanded(false)
+            dispatch(clear_collapse_flag())
+        }
+        // eslint-disable-next-line
+    },[collapse_flag])
 
     return (
 
