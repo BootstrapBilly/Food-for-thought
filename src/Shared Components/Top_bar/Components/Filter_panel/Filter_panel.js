@@ -16,6 +16,7 @@ import { useSelector, useDispatch } from "react-redux"
 
 //redux action creators
 import { toggle_filter, clear_filters } from "../.././../../Store/Actions/1_handle_filters_action"
+import { set_collapse_flag } from '../../../../Store/Actions/6_handle_collapse_food_items_action'
 
 export const Filter_panel = props => {
 
@@ -36,18 +37,16 @@ export const Filter_panel = props => {
     const dispatch = useDispatch()//initialise the usedispatch hook
 
     //*states
-    const [active_filters, set_active_filters] = useState([])
+    const [active_filters, set_active_filters] = useState([])//hold any active filters (selected by the user)
 
     //!effects
-    useEffect(() => {
-
-        set_active_filters(filters)
-
-    }, [filters])
-
+    useEffect(() => {set_active_filters(filters)}, [filters])//whenever the filters inside redux change, update this local state to re-render the component
 
     //_functions
-    const handle_toggle = filter => { dispatch(toggle_filter(filter)) }
+    const handle_toggle = filter => { 
+        dispatch(toggle_filter(filter))//update the filters in redux, which will be caught by the filters selector and update the active filters state here
+        dispatch(set_collapse_flag())//collapse all open food items
+    }
 
     return (
 

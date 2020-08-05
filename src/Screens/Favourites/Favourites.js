@@ -21,54 +21,37 @@ import handle_food_filters from "../../util/handle_food_filters"
 
 //assets
 import empty from "../../Assets/Graphics/empty.svg"
+import not_found from "../../Assets/Graphics/not_found.svg"
+
+//functions
+import handle_response from "./functions/handle_response"
 
 export const Favourites = () => {
 
     //?selectors
     const response = useSelector(state => state.request.response)//grab the response from the api
-    const filters = useSelector(state => state.filters.filters)
-    const search_string = useSelector(state => state.search.search_string)
+    const filters = useSelector(state => state.filters.filters)//determine which filters are applied (breakfast lunch ect)
+    const search_string = useSelector(state => state.search.search_string)//hold the value of the search input
 
     //*states
-    const [favourites, set_favourites] = useState([])//hold the list of favourites(set by the response from the api (line37) )
+    const [favourites, set_favourites] = useState([])//hold the list of favourites(set by the response from the api )
+    const [favourites_copy, set_favourites_copy] = useState([])
 
     //-config
     const dispatch = useDispatch()//initialise the usedispatch hook
 
     // //!effects
+    //only on the first render, fetch all favourites from the database to see if this item is favourites
     // eslint-disable-next-line
-    useEffect(() => { dispatch(send_request({}, "get_favourites", "get")) }, [])//only on the first render, fetch all favourites from the database to see if this item is favourites
+    useEffect(() => { dispatch(send_request({}, "get_favourites", "get")) }, [])
 
-    useEffect(() => {
+    //run the filters function to decide which food items to show, if no filters or search string is active, then it shows all food items
+    //eslint-disable-next-line
+    useEffect(() => { handle_food_filters(filters, search_string, favourites_copy, set_favourites) }, [filters, search_string])
 
-        if (response && response.data.message === "Removed from favourites") {//if a favourite has been removed 
-
-            dispatch(send_request({}, "get_favourites", "get"))//fetch them again to display favourites without the removed one
-
-        }
-        // eslint-disable-next-line
-    }, [response])//Whenever the response changes
-
-    useEffect(() => {
-
-        if (response && response.data.message === "Favourites retrieved") {//if favourites have been retrieved
-
-            set_favourites(response.data.favourites)//set the state of favourites to the ones retreived from the database
-
-        }
-
-        // eslint-disable-next-line
-    }, [response])//re-run the effect whenever the response change
-
-    useEffect(() => {
-
-        if (response && response.data.message === "Favourites retrieved") {
-
-            handle_food_filters(filters, search_string, favourites, set_favourites, response)
-
-        }
-        // eslint-disable-next-line 
-    }, [filters, search_string])
+    //Whenever the response changes, call the handle_response function
+    // eslint-disable-next-line 
+    useEffect(() => {handle_response(response, dispatch, set_favourites, set_favourites_copy, filters, search_string)}, [response])
 
     return (
 
@@ -80,8 +63,9 @@ export const Favourites = () => {
 
                 <div className={classes.empty_prompt_container}>
 
-                    <span className={classes.empty_text}>You have no favourites, add some from the food ideas page !</span>
-                    <img src={empty} alt="Empty favourites graphic" className={classes.empty_graphic} />
+                    <span className={classes.empty_text}>{filters.length || search_string ? "No matches found" : "You have no favourites, add some from the food ideas page !"}</span>
+
+                    <img src={filters.length || search_string ? not_found : empty} alt="Empty favourites graphic" className={classes.empty_graphic} />
 
                 </div>
 

@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react'
 
 import classes from './Font_size.module.css'
 
-//redux action creators
-import { set_font_scale } from '../../../../Store/Actions/4_handle_font_scale_action'
-
 //redux hooks
 import { useDispatch, useSelector } from "react-redux"
 
 //util
 import capitalizeFirstChar from '../../../../util/capitalise_first'
+
+//functions
+import handle_font_size_change from "./functions/handle_font_size_change"
 
 export const Font_size = () => {
 
@@ -23,20 +23,11 @@ export const Font_size = () => {
     const contrast = useSelector(state => state.colour.contrast)//grab the secondary colour from redux
 
     //*states
-    const [active, set_active] = useState(font_size_name)//sets the highlighted (active) font size
+    const [active_font_size, set_active_font_size] = useState(font_size_name)//sets the highlighted (active_font_size) font size
 
     //!effects
-    //this effect is used to change the highlighted font size when a new one has been selected
-    useEffect(()=> {set_active(font_size_name)},[font_size_name])
-
-    const handle_font_size_change = (name, size) => {
-        
-        window.localStorage.setItem("name", name)//save the new font size name to localstorage (So it can be fetched upon page render to highlight the correct font size option)
-        window.localStorage.setItem("size", size)//save the font size to local storage so it can be fetched by redux to scale the app
-
-        dispatch(set_font_scale(name, size))//overwrite the new font scale in redux to update the rest of the app
-
-    }
+    //this is used to change the highlighted font size when a new one has been selected by setting the active font size state to the one which was selected
+    useEffect(() => set_active_font_size(font_size_name), [font_size_name])
 
     return (
 
@@ -45,20 +36,29 @@ export const Font_size = () => {
             <span className={classes.title} style={{ fontSize: `${font_size * 1.15}px` }}>Select a font size :</span>
 
             {[
-                ["small", "14"],
-                ["medium", "17"],
-                ["large", "20"],
-                ["very_large", "24"]
+                { name: "small", value: "14" },
+                { name: "medium", value: "17" },
+                { name: "large", value: "20" },
+                { name: "very_large", value: "24" }
             ]
-            
-            .map(size =>
 
-                    <span className={[classes[size[0]], classes.link].join(" ")}
-                        style={{ background: active === size[0] && primary, color: active === size[0] && contrast }}
-                        onClick={() => handle_font_size_change(size[0], size[1])}
+                .map((font_size, index) =>
+
+                    <span
+
+                        className={[classes[font_size.name], classes.link].join(" ")}
+                        key={index}
+
+                        style={{
+                            background: active_font_size === font_size.name && primary,
+                            color: active_font_size === font_size.name && contrast
+                        }}
+                        
+                        onClick={() => handle_font_size_change(font_size.name, font_size.value, dispatch)}
+
                     >
 
-                        {capitalizeFirstChar(size[0] === "very_large" ? "very large" : size[0])}
+                        {capitalizeFirstChar(font_size.name === "very_large" ? "very large" : font_size.name)}
 
                     </span>
 

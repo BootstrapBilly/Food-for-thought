@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="512px"
-   viewBox="0 0 128 128"
-   width="512px"
+   height="50"
+   viewBox="0 0 12.5 12.5"
+   width="50"
    class=""
    version="1.1"
    id="svg12"
@@ -43,29 +43,30 @@
      id="namedview14"
      showgrid="false"
      inkscape:zoom="0.4609375"
-     inkscape:cx="-827.66102"
-     inkscape:cy="256"
-     inkscape:window-x="-8"
+     inkscape:cx="-650.84746"
+     inkscape:cy="269.01695"
+     inkscape:window-x="1912"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="g10" />
   <g
-     id="g10">
+     id="g10"
+     transform="translate(0,-115.5)">
     <path
        inkscape:connector-curvature="0"
        id="path4"
        data-old_color="#fff16b"
-       style="fill:#808080;fill-opacity:1;stroke-width:1.23784375"
+       style="fill:#808080;fill-opacity:1;stroke-width:0.11663902"
        class=""
        data-original="#FFF16B"
-       d="M 67.086786,115.76129 32.494242,128.40016 33.504163,90.691803 11.116152,60.795386 46.331505,50.128939 67.086786,19.012927 l 20.75528,31.116012 35.215364,10.666447 -22.38802,29.896417 1.00993,37.708357 z" />
+       d="M 6.4239994,126.80257 3.1644141,127.9935 3.2595769,124.44035 1.15,121.62329 l 3.3182714,-1.00507 1.955728,-2.93197 1.955728,2.93197 3.3182726,1.00507 -2.109578,2.81706 0.095164,3.55315 z" />
     <path
        inkscape:connector-curvature="0"
        id="path6"
        data-old_color="#ff7d47"
-       style="fill:#c8c8c8;fill-opacity:1;stroke-width:1.23784375"
+       style="fill:#c8c8c8;fill-opacity:1;stroke-width:0.11663902"
        class="active-path"
        data-original="#FF7D47"
-       d="M 67.086786,101.30178 46.281436,108.90292 46.889587,86.223713 33.424786,68.243454 54.60382,61.828028 67.086786,43.113751 79.569754,61.828028 100.7488,68.243454 87.283986,86.223713 87.892134,108.90292 Z" />
+       d="m 6.4239994,125.4401 -1.9604459,0.71623 0.057305,-2.137 -1.2687609,-1.69423 1.9956574,-0.6045 1.1762446,-1.7634 1.1762448,1.7634 1.9956586,0.6045 -1.2687621,1.69423 0.057305,2.137 z" />
   </g>
 </svg>

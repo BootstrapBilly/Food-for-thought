@@ -14,7 +14,7 @@ export const Portion_toggle = props => {
     const font_size = useSelector(state => state.font.size)//grab the current font size from redux
 
     //*states
-    const [active_portion, set_active_portion] = useState(props.default_portion)
+    const [active_portion, set_active_portion] = useState(props.default_portion)//hold the name of the currently active portion size so it can be highlighted
 
     return (
 
@@ -24,9 +24,18 @@ export const Portion_toggle = props => {
 
             <div className={classes.option_wrapper}>
 
-                {props.toggle_options.map(option =>
+                {props.toggle_options.map((option, index) =>
 
-                    <ToggleOption option={option} title={props.title} default_portion={active_portion} change_active_portion={(portion)=> set_active_portion(portion)} active_portion={active_portion} />
+                    <ToggleOption
+
+                        key={index}
+                        option={option}
+                        title={props.title}
+                        default_portion={active_portion}
+                        change_active_portion={(portion) => set_active_portion(portion)}
+                        active_portion={active_portion}
+                        
+                    />
 
                 )}
 

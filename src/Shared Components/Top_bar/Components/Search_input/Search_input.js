@@ -20,27 +20,28 @@ export const Search_input = props => {
     const primary = useSelector(state => state.colour.primary)
 
     //-config
-    const dispatch = useDispatch()
+    const dispatch = useDispatch()//initialise the usedispatch hook
 
     //=refs
-    const input_ref = useRef(null)
+    const input_ref = useRef(null)//hold a reference to the input so it can be cleared and autofocused
 
     //*states
-    const [input_active, set_input_active] = useState(false)
+    const [input_active, set_input_active] = useState(false)//determine if the search input is open or close
 
     //_functions
-    const handle_expand_search = () => {
+    const handle_toggle_search = () => {
 
-        props.handle_expand_search()
-        set_input_active(!input_active)
-        if(input_active) dispatch(set_search_string(""))
+        props.handle_toggle_search()//call the prop handler function to set the input state to open
+        set_input_active(!input_active)//set active state to focus or blur/clear the input and show the transition
+        if(input_active) dispatch(set_search_string(""))//if the input was open, clear it
 
     }
 
     const handle_input = e => {
 
-        dispatch(set_search_string(e.target.value))
-        dispatch(set_collapse_flag())
+        dispatch(set_search_string(e.target.value))//set the search string in redux, which will then call the filter function to filter by the search string
+        dispatch(set_collapse_flag())//collapse all open food items
+
     }
 
     return (
@@ -63,9 +64,10 @@ export const Search_input = props => {
                 
                 }
 
-            <div className={[classes.icon_container, props.search_expanded && classes.icon_container_expanded].join(" ")} onClick={() => handle_expand_search()}>
+            <div className={[classes.icon_container, props.search_expanded && classes.icon_container_expanded].join(" ")} onClick={() => handle_toggle_search()}>
 
                 <img src={Search} alt="Search for food icon icon" className={[classes.search_icon, props.search_expanded && classes.search_icon_expanded].join(" ")} />
+
                 <span className={classes.search_caption} style={{fontSize: `${font_size*0.7}px`, color: primary }}>{props.search_expanded ? "Close" : "Search"}</span>
 
             </div>

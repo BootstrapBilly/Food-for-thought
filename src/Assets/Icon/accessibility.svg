@@ -9,9 +9,9 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="Capa_1"
    enable-background="new 0 0 512 512"
-   height="512"
-   viewBox="0 0 512 512"
-   width="512"
+   height="50"
+   viewBox="0 0 50 50"
+   width="50"
    version="1.1"
    sodipodi:docname="accessibility.svg"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
@@ -42,26 +42,26 @@
      inkscape:window-height="1017"
      id="namedview17"
      showgrid="false"
-     inkscape:zoom="0.65186406"
-     inkscape:cx="-211.07906"
-     inkscape:cy="210.61356"
+     inkscape:zoom="3.6875"
+     inkscape:cx="65.246368"
+     inkscape:cy="76.434426"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="Capa_1" />
   <path
-     style="fill:#fff16b;fill-opacity:1;stroke-width:0.85618168"
+     style="fill:#fff16b;fill-opacity:1;stroke-width:0.07586227"
      inkscape:connector-curvature="0"
      id="path2"
-     d="M 251.39781,75.169047 114.06798,294.35155 251.39781,513.53406 c 121.05125,0 219.18251,-98.13126 219.18251,-219.18251 0,-121.05124 -98.13126,-219.182503 -219.18251,-219.182503 z" />
+     d="m 24.788588,11.336646 -12.168156,19.42074 12.168156,19.420742 c 10.725788,0 19.420742,-8.694954 19.420742,-19.420742 0,-10.725786 -8.694954,-19.42074 -19.420742,-19.42074 z" />
   <path
-     style="fill:#fff16b;fill-opacity:1;stroke-width:0.85618168"
+     style="fill:#fff16b;fill-opacity:1;stroke-width:0.07586227"
      inkscape:connector-curvature="0"
      id="path4"
-     d="m 32.215305,294.35155 c 0,121.05125 98.131255,219.18251 219.182505,219.18251 V 75.169047 c -121.05125,0 -219.182505,98.131263 -219.182505,219.182503 z" />
+     d="m 5.3678472,30.757386 c 0,10.725788 8.6949538,19.420742 19.4207408,19.420742 V 11.336646 c -10.725787,0 -19.4207408,8.694954 -19.4207408,19.42074 z" />
   <g
      id="g1148"
-     transform="matrix(0.64247334,0,0,0.64247334,94.309913,125.3218)"
+     transform="matrix(0.05692657,0,0,0.05692657,10.869761,15.780447)"
      style="fill:#ff7d47;fill-opacity:1">
     <g
        id="g1089"
