@@ -10,7 +10,6 @@ import capitalizeFirstChar from '../../../../../../../util/capitalise_first'
 
 //redux action creators
 import { send_request } from '../../../../../../../Store/Actions/0_send_request_action'
-import { set_kcal_render_flag } from '../../../../../../../Store/Actions/5_handle_toggle_portion_action'
 
 export const Toggle_option = props => {
 
@@ -24,12 +23,11 @@ export const Toggle_option = props => {
     const response = useSelector(state => state.request.response)
 
     // eslint-disable-next-line
-    useEffect(() => {dispatch(send_request({ title: props.title.toLowerCase() }, "get_portion_size"))}, [props.title])
-
+    useEffect(() => {dispatch(send_request({ title: props.title.toLowerCase()}, "get_portion_size"))}, [props.title])
 
     useEffect(() => {
 
-        if (response && response.data.message === "Portion size data retrieved" && response.data.details.title === props.title) {
+        if (response && response.data.message === "Portion size data retrieved" && response.data.details.title.toLowerCase() === props.title.toLowerCase()) {
 
            props.change_active_portion(response.data.details.text)
 
@@ -39,9 +37,10 @@ export const Toggle_option = props => {
 
     const handle_portion_select = () => {
 
-        dispatch(send_request({ title: props.title.toLowerCase(), text: props.option.text, multiplier: props.option.multiplier }, "set_portion_size"))
-        props.change_active_portion(props.option.text)
-        dispatch(set_kcal_render_flag())
+        //update the portion preferences in the db
+        dispatch(send_request({ title: props.title.toLowerCase(), text: props.option.text.toLowerCase(), multiplier: props.option.multiplier }, "set_portion_size"))
+
+        props.change_active_portion(props.option.text)//change the active portion state in props to change the highlighted option
 
     }
 
@@ -52,8 +51,8 @@ export const Toggle_option = props => {
             style={{
 
                 border: `1px solid ${primary}`,
-                color: props.active_portion === props.option.text ? contrast : primary,
-                backgroundColor: props.active_portion === props.option.text && primary,
+                color: props.active_portion.toLowerCase() === props.option.text.toLowerCase() ? contrast : primary,
+                backgroundColor: props.active_portion.toLowerCase() === props.option.text.toLowerCase() && primary,
                 fontSize: font_size * 0.75 + "px"
 
             }}

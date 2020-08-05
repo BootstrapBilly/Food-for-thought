@@ -31,20 +31,6 @@ export const Nav_icon = props => {
     //!effects
     useEffect(() => { set_active_icon(url) }, [url])//whenever the url changes, set the icon to match so it is active
 
-    useEffect(() => {//this effect is used to clean up the subscription to the bounce animation state after it has been played
-
-        if (show_animation) {
-
-            setTimeout(() => {
-
-                return set_show_animation(false)
-
-            }, 150);
-
-        }
-    }, [show_animation])
-
-
     //_functions
     const handle_redirect = () => {
 
@@ -55,8 +41,12 @@ export const Nav_icon = props => {
             dispatch(clear_filters())//clear any active filters before navigating
             dispatch(clear_search_string())//clear the search string before navigating
             set_redirect(props.to)//redirect them to their desired page
+            window.scrollTo(0, 0)
+            return set_show_animation(false)
 
         }, 150);
+
+        
 
     }
 
