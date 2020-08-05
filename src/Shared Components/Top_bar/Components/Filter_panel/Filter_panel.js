@@ -64,7 +64,7 @@ export const Filter_panel = props => {
 
                     </div>
 
-                    <div className={classes.top_section_bottom_row}><span className={classes.sub_title} style={{fontSize: `${font_size* 0.87}px`}}>Select all which apply </span></div>
+                    <div className={classes.top_section_bottom_row}><span className={classes.sub_title} style={{fontSize: `${font_size* 0.87}px`}}>What do you want to see ? </span></div>
 
                 </div>
 
