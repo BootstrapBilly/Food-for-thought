@@ -24,10 +24,10 @@ export const Favourite_button = props => {
     //-config
     const dispatch = useDispatch()//initialise the usedispatch hook
 
-    // //!effects
+    //!effects
+    //only on the first render, fetch all favourites from the database to see if this item is favourites
     // eslint-disable-next-line
-    useEffect(() => { dispatch(send_request({}, "get_favourites", "get")) }, [])//only on the first render, fetch all favourites from the database to see if this item is favourites
-
+    useEffect(() => { dispatch(send_request({}, "get_favourites", "get")) }, [])
 
     useEffect(() => {
 
@@ -64,15 +64,13 @@ export const Favourite_button = props => {
     //_functions
     const handle_toggle_favourite = () => {//this function is called whenever the user clicks the favourite icon
 
-
         if (!is_favourited) set_show_animation(true)//set the show animation state to add the animated class to the icon
 
         dispatch(send_request(props.data, "toggle_favourite"))//add or remove the favourite from the database
 
-        if (window.location.href.includes("/favourites")) return
+        if (window.location.href.includes("/favourites")) return //if the fooditem was removed from the favourites screen, do not update the icon because the whole card will disappear 
 
-        else set_is_favourited(!is_favourited)//update the state so that the icon changes to the correct one
-
+        else set_is_favourited(!is_favourited)//Otherwise update the icon so its not active and favourited anymore
 
     }
 

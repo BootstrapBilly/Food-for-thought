@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="512px"
-   viewBox="0 0 128 128"
-   width="512px"
+   height="50"
+   viewBox="0 0 12.5 12.5"
+   width="50"
    class=""
    version="1.1"
    id="svg12"
@@ -23,6 +23,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -41,30 +42,31 @@
      inkscape:window-height="1017"
      id="namedview14"
      showgrid="false"
-     inkscape:zoom="0.4609375"
-     inkscape:cx="-827.66102"
-     inkscape:cy="256"
+     inkscape:zoom="3.6875"
+     inkscape:cx="68.774132"
+     inkscape:cy="-32.748091"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="g10" />
   <g
-     id="g10">
+     id="g10"
+     transform="translate(0,-115.5)">
     <path
        inkscape:connector-curvature="0"
        id="path4"
        data-old_color="#fff16b"
-       style="fill:#ff7d47;fill-opacity:1;stroke-width:1.23784375"
+       style="fill:#ff7d47;fill-opacity:1;stroke-width:0.11663897"
        class=""
        data-original="#FFF16B"
-       d="M 67.086786,115.76129 32.494242,128.40016 33.504163,90.691803 11.116152,60.795386 46.331505,50.128939 67.086786,19.012927 l 20.75528,31.116012 35.215364,10.666447 -22.38802,29.896417 1.00993,37.708357 z" />
+       d="M 6.4239993,126.80258 3.1644136,127.9935 3.2595773,124.44036 1.15,121.6233 l 3.3182722,-1.00508 1.9557275,-2.93197 1.9557286,2.93197 3.3182717,1.00508 -2.1095769,2.81706 0.095164,3.55314 z" />
     <path
        inkscape:connector-curvature="0"
        id="path6"
        data-old_color="#ff7d47"
-       style="fill:#fff16b;fill-opacity:1;stroke-width:1.23784375"
+       style="fill:#fff16b;fill-opacity:1;stroke-width:0.11663897"
        class="active-path"
        data-original="#FF7D47"
-       d="M 67.086786,101.30178 46.281436,108.90292 46.889587,86.223713 33.424786,68.243454 54.60382,61.828028 67.086786,43.113751 79.569754,61.828028 100.7488,68.243454 87.283986,86.223713 87.892134,108.90292 Z" />
+       d="m 6.4239993,125.44009 -1.9604464,0.71624 0.057303,-2.13699 -1.2687606,-1.69423 1.9956578,-0.6045 1.1762439,-1.76339 1.1762456,1.76339 1.9956587,0.6045 -1.2687623,1.69423 0.057303,2.13699 z" />
   </g>
 </svg>

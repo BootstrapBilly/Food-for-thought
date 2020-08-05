@@ -1,16 +1,9 @@
-const handle_filters = (filters, search_string, food_items, set_items, response) => {
+const handle_filters = (filters, search_string, food_items, set_items) => {
 
     const filtered_items = []//initialise the array to hold filtered items (selected with the filter panel)
     const searched_for_items = []//hold the array of search for items (with the search bar)
 
-    if (!search_string && filters.length < 1) {
-
-        if (response) return set_items(response.data.favourites)
-
-        else return set_items(food_items
-
-        )
-    }//if theres no filters or search string, show all items
+    if (!search_string && filters.length < 1) {return set_items(food_items)}//if theres no filters or search string, show all items
 
     if (filters.length) { apply_filter_panel(food_items, filters, filtered_items) }//if there are filters, call the filterpanel function
 

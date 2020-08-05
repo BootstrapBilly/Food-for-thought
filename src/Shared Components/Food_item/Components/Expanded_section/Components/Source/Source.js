@@ -3,7 +3,7 @@ import React from 'react'
 import classes from './Source.module.css'
 
 //redux hooks
-import {useSelector} from "react-redux"
+import { useSelector } from "react-redux"
 
 export const Source = props => {
 
@@ -13,9 +13,17 @@ export const Source = props => {
 
     return (
 
-        <div className={classes.container} style={{marginTop:props.additional_text && "10px"}}>
+        <div className={classes.container} style={{ marginTop: props.additional_text && "10px" }}>
 
-            <a href={props.source} className={classes.title} style={{color:primary,fontSize:`${font_size * 0.80}px`}}>{props.additional_text ? props.additional_text : "The full micronutrient breakdown and source of this data can be found by tapping here."}</a>
+            <a
+                href={props.source}
+                className={classes.title}
+                style={{ color: primary, fontSize: `${font_size * 0.80}px` }}
+            >
+                
+                {props.additional_text ? props.additional_text : "The full micronutrient breakdown and source of this data can be found by tapping here."}
+
+            </a>
 
         </div>
 

@@ -4,7 +4,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom"
 
 //Components
-import Recommended from "./Screens/Recommended/Recommended"
+import Food_ideas from "./Screens/Food_ideas/Food_ideas"
 import Favourites from "./Screens/Favourites/Favourites"
 import Accessibility from "./Screens/Accessibility/Accessibility"
 
@@ -16,7 +16,7 @@ const App = () => {
 
       <Switch>
 
-        <Route path="/" exact component={Recommended} />
+        <Route path="/" exact component={Food_ideas} />
         <Route path="/favourites" component={Favourites} />
         <Route path="/accessibility" component={Accessibility} />
 

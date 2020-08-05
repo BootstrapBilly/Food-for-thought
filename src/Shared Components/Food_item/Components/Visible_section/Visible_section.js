@@ -12,6 +12,9 @@ import FavouriteButton from "./Components/Favourite_button"
 import { useSelector, useDispatch } from "react-redux"
 import { send_request } from '../../../../Store/Actions/0_send_request_action'
 
+//functions
+import handle_response from "./Functions/handle_response"
+
 
 export const Visible_section = props => {
 
@@ -21,37 +24,19 @@ export const Visible_section = props => {
     //?selectors
     const primary = useSelector(state => state.colour.primary)//grab the primary colour from redux
     const font_size = useSelector(state => state.font.size)//grab the font size from redux
-    const response = useSelector(state => state.request.response)
-    const re_render_flag = useSelector(state => state.portion.re_render_flag)
+    const response = useSelector(state => state.request.response)//grab the response from redux
 
     //*states
     const [calorie_multiplier, set_calorie_multiplier] = useState(1)
 
     //!effects
-    useEffect(() => {
+    //every time the component is rendered, fetch the selected portion size from the backend
+    // eslint-disable-next-line
+    useEffect(() => { dispatch(send_request({ title: props.data.title.toLowerCase() }, "get_portion_size")) }, [props.data.title])
 
-        dispatch(send_request({ title: props.data.title }, "get_portion_size"))
-
-    }, [props.data.title])
-
-    useEffect(() => {
-
-        if (response && response.data.message === "Portion size data retrieved" && response.data.details.title === props.data.title) {
-
-            set_calorie_multiplier(response.data.details.multiplier)
-
-        }
-
-    }, [response])
-
-    useEffect(()=> {
-
-     if(response && response.data.message === "portion preferences saved" && response.data.details.title === props.data.title){
-         
-        set_calorie_multiplier(response.data.details.multiplier)
-        
-     }
-    },[response])
+    //this effect calls the helper function to handle the response whenever  the component is rendered, or the portion size is changed
+    // eslint-disable-next-line
+    useEffect(() => { handle_response(response, set_calorie_multiplier, props) }, [response])
 
     return (
 

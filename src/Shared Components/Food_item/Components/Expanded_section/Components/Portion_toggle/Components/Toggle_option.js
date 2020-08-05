@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect} from 'react'
 
 import classes from './Toggle_option.module.css'
 
@@ -23,11 +23,8 @@ export const Toggle_option = props => {
     const font_size = useSelector(state => state.font.size)//grab the current font size from redux
     const response = useSelector(state => state.request.response)
 
-    useEffect(() => {
-
-        dispatch(send_request({ title: props.title }, "get_portion_size"))
-
-    }, [props.title])
+    // eslint-disable-next-line
+    useEffect(() => {dispatch(send_request({ title: props.title.toLowerCase() }, "get_portion_size"))}, [props.title])
 
 
     useEffect(() => {
@@ -37,12 +34,12 @@ export const Toggle_option = props => {
            props.change_active_portion(response.data.details.text)
 
         }
-
+// eslint-disable-next-line
     }, [response])
 
     const handle_portion_select = () => {
 
-        dispatch(send_request({ title: props.title, text: props.option.text, multiplier: props.option.multiplier }, "set_portion_size"))
+        dispatch(send_request({ title: props.title.toLowerCase(), text: props.option.text, multiplier: props.option.multiplier }, "set_portion_size"))
         props.change_active_portion(props.option.text)
         dispatch(set_kcal_render_flag())
 

@@ -37,7 +37,7 @@ export const Nav_icon = props => {
 
             setTimeout(() => {
 
-                set_show_animation(false)
+                return set_show_animation(false)
 
             }, 150);
 
