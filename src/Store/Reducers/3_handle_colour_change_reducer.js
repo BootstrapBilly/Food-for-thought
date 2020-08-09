@@ -2,7 +2,7 @@ import { HANDLE_PRIMARY_CHANGE, HANDLE_SECONDARY_CHANGE, HANDLE_CONTRAST_CHANGE,
 
 const initialState = {//set the initial state
 
-    primary: window.localStorage.getItem("primary") || "#0f52ba",
+    primary: window.localStorage.getItem("primary") || "#3299CC",
     secondary: window.localStorage.getItem("secondary") || "#BA770F",
     contrast: window.localStorage.getItem("contrast") || "white",
     good: window.localStorage.getItem("good") || "green",

@@ -1,0 +1,22 @@
+.container{
+    position: absolute;
+    right: 10px;
+    top: 42%;
+    height: 100%;
+    transform: scale(0.8);
+}
+
+.top_line, .bottom_line{
+    width: 20px;
+    height: 2px;
+    position: relative;
+}
+
+.top_line{
+    transform: rotate(45deg);
+    top: -12px;
+}
+
+.bottom_line{
+    transform: rotate(-45deg);
+}

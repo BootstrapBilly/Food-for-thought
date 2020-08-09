@@ -18,8 +18,6 @@ export const Cons = props => {
 
         <div className={classes.container}>
 
-            <span className={classes.title} style={{color:bad, fontSize:`${font_size * 1}px`}}>Bad :</span>
-
             {props.data.map(con =>
 
                 <div key={con} className={classes.con}>

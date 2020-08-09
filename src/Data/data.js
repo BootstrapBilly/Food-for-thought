@@ -4,6 +4,7 @@ const food_items = [
 
         title: "Avocado",
         thumbnail: "avocado",
+        image: "avocado-large",
         rating: 3,
         kcals: 322,
         source: "https://nutritiondata.self.com/facts/fruits-and-fruit-juices/1843/2",
@@ -19,6 +20,7 @@ const food_items = [
 
         title: "Egg",
         thumbnail: "egg",
+        image: "egg-large",
         rating: 4,
         kcals: 63,
         source: "https://nutritiondata.self.com/facts/dairy-and-egg-products/111/2",
@@ -34,6 +36,7 @@ const food_items = [
 
         title: "Oats",
         thumbnail: "oats",
+        image: "oats-large",
         rating: 5,
         kcals: 195,
         source: "https://nutritiondata.self.com/facts/cereal-grains-and-pasta/5708/2",
@@ -49,6 +52,7 @@ const food_items = [
 
         title: "Almonds",
         thumbnail: "almonds",
+        image: "almonds-large",
         rating: 4,
         kcals: 143,
         source: "https://nutritiondata.self.com/facts/nut-and-seed-products/3085/2",
@@ -62,17 +66,18 @@ const food_items = [
 
     {
 
-        title: "Tinned Tuna",
+        title: "Tuna steak",
         thumbnail: "tuna",
+        image: "tuna-large",
         rating: 3,
-        kcals: 191,
-        source: "https://nutritiondata.self.com/facts/finfish-and-shellfish-products/4206/2",
+        kcals: 144,
+        source: "https://www.nutritionvalue.org/Fish%2C_raw%2C_bluefin%2C_fresh%2C_tuna_nutritional_value.html",
         additional_source: "https://holisticacare.com/pros-cons-tuna/",
         pros: ["Cheap to buy", "Very high in protein", "High in omega 3 fatty acids", "High in many vitamins and minerals including B3, B6, B12, Phosphorous and Selenium"],
         cons: ["High in mercury, which is toxic in large doses (Research recommends you limit yourself to 3 times per month)"],
         categories: ["< 5 mins", "Lunch", "Dinner", "fish"],
-        toggle_options: [{text:"Half", multiplier:0.5}, {text:"Whole", multiplier:1}],
-        default_portion:"Whole"
+        toggle_options: [{text:"50g", multiplier:0.5}, {text:"100g", multiplier:1} , {text:"200g", multiplier:2}], 
+        default_portion:"100g"
 
     },
 
@@ -80,6 +85,7 @@ const food_items = [
 
         title: "Salmon Fillet",
         thumbnail: "salmon",
+        image: "salmon-large",
         rating: 4,
         kcals: 367,
         source: "https://nutritiondata.self.com/facts/finfish-and-shellfish-products/4259/2",
@@ -95,6 +101,7 @@ const food_items = [
 
         title: "Beef liver",
         thumbnail: "liver",
+        image: "liver-large",
         rating: 5,
         kcals: 191,
         source: "https://nutritiondata.self.com/facts/beef-products/3469/2",

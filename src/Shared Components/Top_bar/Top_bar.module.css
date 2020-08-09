@@ -8,18 +8,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    border-bottom: 0.5px solid rgba(128, 128, 128, 0.342);
+    background-color: gainsboro;
+    box-shadow: 0 4px 15px -1px rgba(128, 128, 128, 0.4);
 }
 
 .title {
-    font-weight: 900;
     font-size: 24px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
 }
 
 .filter_container {
     position: absolute;
-    left: 8px;
+    left: 16px;
     top: 5px;
     display: flex;
     justify-content: center;

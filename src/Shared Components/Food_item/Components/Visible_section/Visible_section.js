@@ -6,7 +6,8 @@ import classes from './Visible_section.module.css'
 import Capitalise from "../../../../util/capitalise_first"
 
 //components
-import FavouriteButton from "./Components/Favourite_button"
+import DetailArrow from "./Components/Detail_arrow/Detail_arrow"
+import Thumbnail from "./Components/Thumbnail/Thumbnail"
 
 //redux hooks
 import { useSelector, useDispatch } from "react-redux"
@@ -15,6 +16,8 @@ import { send_request } from '../../../../Store/Actions/0_send_request_action'
 //functions
 import handle_response from "./Functions/handle_response"
 
+//external
+import { Link } from "react-router-dom"
 
 export const Visible_section = props => {
 
@@ -42,17 +45,21 @@ export const Visible_section = props => {
 
         <div className={classes.container} onClick={props.onClick}>
 
-            <img src={require(`../../../../Assets/Food_images/${props.data.thumbnail}.jpg`)} className={classes.thumbnail} alt={`An ${props.data.title}`} />
+            <Thumbnail src={props.data.thumbnail} alt={props.data.title} data={props.data} />
 
-            <div className={classes.text_section}>
+            <Link to={{ pathname: "/food_detail", state: { data: props.data } }} style={{ textDecoration: 'none' }}>
 
-                <span className={classes.title} style={{ color: primary, fontSize: `${font_size * 1.1}px` }}> {Capitalise(props.data.title)} </span>
+                <div className={classes.text_section}>
 
-                <span className={classes.kcals} style={{ fontSize: `${font_size * 0.85}px` }}> {`Kcals : ${props.data.kcals * calorie_multiplier}`} </span>
+                    <span className={classes.title} style={{ color: primary, fontSize: `${font_size * 1.1}px` }}> {Capitalise(props.data.title)} </span>
 
-            </div>
+                    <span className={classes.kcals} style={{ fontSize: `${font_size * 0.85}px` }}> {`Kcals : ${props.data.kcals * calorie_multiplier}`} </span>
 
-            <FavouriteButton data={props.data} />
+                </div>
+
+            </Link>
+
+            <DetailArrow />
 
         </div>
 

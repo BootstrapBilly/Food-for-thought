@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ebebeb;
+  background-color:whitesmoke;
 }
 
 code {
@@ -16,4 +16,5 @@ code {
 #root{
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
+
 }

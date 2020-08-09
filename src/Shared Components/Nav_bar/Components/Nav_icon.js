@@ -16,7 +16,7 @@ import { clear_search_string } from "../../../Store/Actions/2_handle_search_acti
 export const Nav_icon = props => {
 
     //?selectors
-    const primary = useSelector(state => state.colour.primary)
+    const contrast = useSelector(state => state.colour.contrast)
     const font_size = useSelector(state => state.font.size)
 
     //-config
@@ -46,7 +46,7 @@ export const Nav_icon = props => {
 
         }, 150);
 
-        
+
 
     }
 
@@ -56,13 +56,13 @@ export const Nav_icon = props => {
 
             <img
 
-                src={require(`../../../Assets/Icon/${active_icon !== props.to ? props.source + "-grey" : props.source}.svg`)}
+                src={require(`../../../Assets/Icon/${active_icon === "/food_detail" && props.to === "/" ? "recommended" : active_icon !== props.to ? props.source + "-grey" : props.source}.svg`)}
                 alt={props.alt}
                 className={[classes.icon, show_animation && classes.animated_icon].join(" ")}
 
             />
 
-            <span className={[classes.text, active_icon === props.to && classes.active_text].join(" ")} style={{ fontSize: `${font_size * 0.7}px`, color: primary }}>{props.text}</span>
+            <span className={[classes.text, active_icon === props.to && classes.active_text].join(" ")} style={{ fontSize: `${font_size * 0.7}px`, color: contrast }}>{props.text}</span>
 
             {/*Whenever the redirect state at the top is set, redirect becomes truish and the component is rendered, which redirects to the desired route. The state is set by clicking an icon on the icon bar */
 

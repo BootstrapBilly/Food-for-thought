@@ -4,21 +4,15 @@
     position: relative;
 }
 
-.thumbnail{
-    height: 60px;
-    width: 60px;
-    object-fit: cover;
-    border-radius: 50px;
-}
-
 .title{
-    font-size: 22px;
+    font-size: 27px;
     font-weight: 900;
 }
 
 .kcals{
     font-size: 18px;
     font-weight: 900;
+    color: gray;
 }
 
 .text_section{
@@ -26,5 +20,7 @@
     flex-direction: column;
     margin-left: 15px;
     margin-top: 5px;
+    width: 100%;
 }
+
 

@@ -27,7 +27,7 @@ export const Filter_square = props => {
                 alt={`${props.details.name} filter icon`}
                 className={classes.icon} />
 
-            <span style={{ color: is_active && contrast, marginTop:"5px", zIndex:"2", fontSize: `${font_size* 0.8}px`}}>{props.details.name}</span>
+            <span style={{ color: is_active ? contrast : primary , marginTop:"5px", zIndex:"2", fontSize: `${font_size* 0.8}px`}}>{props.details.name}</span>
 
         </div>
 

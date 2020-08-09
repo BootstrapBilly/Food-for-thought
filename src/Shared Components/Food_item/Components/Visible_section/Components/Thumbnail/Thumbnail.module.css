@@ -1,0 +1,33 @@
+.thumbnail_container {
+    position: relative;
+    padding: 0 10px;
+}
+
+.thumbnail {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    filter: drop-shadow(3px 3px 4px rgba(128, 128, 128, 0.611));
+    z-index: 2;
+}
+
+.favourite_wrapper {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 20px;
+    border-color: transparent transparent rgb(190, 190, 190) transparent;
+    transform: rotate(45deg);
+}
+
+.favourite_star {
+    position: relative;
+    height: 16px;
+    width: 16px;
+    transform: rotate(27deg);
+    left: -6px;
+    top: 2px;
+}

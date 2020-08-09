@@ -1,7 +1,6 @@
 .container{
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
 }
 
 .title{
@@ -13,5 +12,5 @@
 .pro{
     display: flex;
     margin-top: 10px;
-    margin-left: 27px;
+    margin-left: 52px;
 }

@@ -6,11 +6,16 @@ import classes from './Nav_bar.module.css'
 //components
 import NavIcon from "./Components/Nav_icon"
 
+//redux hooks
+import {useSelector} from "react-redux"
+
 export const Nav_bar = () => {
+
+    const primary = useSelector(state => state.colour.primary)
 
     return (
 
-        <div className={classes.container}>
+        <div className={classes.container} style={{background:primary }}>
 
             <NavIcon
 

@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.bar_container{
+    background: white;
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    justify-content: space-evenly;
+    padding: 5px 0px;
+    border: 1px solid rgba(128, 128, 128, 0.281);
+}
+
+.toggle_link{
+    font-size: 20px;
+    color: rgba(128, 128, 128, 0.782);
+}
+
+.bottom_section{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    overflow: scroll;
+    padding-bottom: 100px;
+}

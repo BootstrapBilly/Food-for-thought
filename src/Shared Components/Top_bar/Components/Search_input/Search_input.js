@@ -18,6 +18,7 @@ export const Search_input = props => {
     const search_string = useSelector(state => state.search.search_string)
     const font_size = useSelector(state => state.font.size)
     const primary = useSelector(state => state.colour.primary)
+    const contrast = useSelector(state => state.colour.contrast)
 
     //-config
     const dispatch = useDispatch()//initialise the usedispatch hook
@@ -68,7 +69,7 @@ export const Search_input = props => {
 
                 <img src={Search} alt="Search for food icon icon" className={[classes.search_icon, props.search_expanded && classes.search_icon_expanded].join(" ")} />
 
-                <span className={classes.search_caption} style={{fontSize: `${font_size*0.7}px`, color: primary }}>{props.search_expanded ? "Close" : "Search"}</span>
+                <span className={classes.search_caption} style={{fontSize: `${font_size*0.7}px`, color: contrast }}>{props.search_expanded ? "Close" : "Search"}</span>
 
             </div>
 

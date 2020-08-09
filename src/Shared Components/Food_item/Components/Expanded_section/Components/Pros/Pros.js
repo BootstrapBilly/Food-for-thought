@@ -19,8 +19,6 @@ export const Pros = props => {
 
         <div className={classes.container}>
 
-            <span className={classes.title} style={{color:good, fontSize:`${font_size * 1}px`}}>Good :</span>
-
             {props.data.map(pro => 
             
             <div key={pro} className={classes.pro}>

@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 15px;
+    font-weight: 10;
+    font-family: 'Exo 2', sans-serif;
+    padding: 10px 5px;
+}
+
+.icon{
+    height: 15px;
+    width: 15px;
+    transform: rotate(180deg);
+    margin-bottom: 2px;
+}
