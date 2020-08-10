@@ -6,6 +6,7 @@ import App from './App';
 import { createStore, combineReducers, applyMiddleware } from "redux"
 import reduxThunk from "redux-thunk"
 import { Provider } from "react-redux"
+import { BrowserRouter} from "react-router-dom"
 
 import request_reducer from "./Store/Reducers/0_send_request_reducer"
 import filters_reducer from "./Store/Reducers/1_handle_filters_reducer"

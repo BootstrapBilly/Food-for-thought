@@ -8,3 +8,12 @@
     left: -18px;
     margin-top: 30px;
 }
+
+@supports (-webkit-touch-callout: none) {
+   
+    .container{
+        left: -25px;
+        bottom: 13px;
+    }
+  }
+  

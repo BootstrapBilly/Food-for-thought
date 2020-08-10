@@ -32,7 +32,7 @@ export const Recommended = () => {
 
     return (
 
-        <div className={classes.container}>
+        <div className={classes.container} >
 
             <TopBar page={"Food Ideas"} />
 

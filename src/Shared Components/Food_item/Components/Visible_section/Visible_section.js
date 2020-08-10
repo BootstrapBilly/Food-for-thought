@@ -48,7 +48,7 @@ export const Visible_section = props => {
 
             <Thumbnail src={props.data.thumbnail} alt={props.data.title} data={props.data} />
 
-            <Link to={{ pathname: "/food_detail", state: { data: props.data, favourites:props.favourites && true, food_ideas:props.food_ideas && true } }} style={{ textDecoration: 'none' }}>
+            <Link to={{ pathname: "/food_detail", state: { data: props.data, favourites:props.favourites && true, food_ideas:props.food_ideas && true } }} style={{ textDecoration: 'none' }} onClick={()=> window.scrollTo(0, 0)}>
 
                 <div className={classes.text_section}>
 
@@ -63,6 +63,7 @@ export const Visible_section = props => {
             <Rating rating={props.data.rating} />
 
                 <DetailArrow />
+
             </Link>
         </div>
 

@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -44,7 +44,7 @@
      id="namedview35"
      showgrid="false"
      inkscape:zoom="0.4609375"
-     inkscape:cx="-105.22034"
+     inkscape:cx="-466.44068"
      inkscape:cy="256"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
@@ -56,42 +56,42 @@
      class=""
      id="path6"
      inkscape:connector-curvature="0"
-     style="fill:#0f52ba;fill-opacity:1" />
+     style="fill:#3499ce;fill-opacity:1" />
   <path
      d="M 432.69,399.56 H 256 v -30.12 h 176.69 c 19.92,0 19.93,30.12 0,30.12 z"
      data-original="#001737"
      class=""
      id="path8"
      inkscape:connector-curvature="0"
-     style="fill:#0f52ba;fill-opacity:1" />
+     style="fill:#3499ce;fill-opacity:1" />
   <path
      d="M 431.18,269.55 H 77.8 c -19.92,0 -19.92,-30.11 0,-30.11 h 353.38 c 19.93,0 19.93,30.11 0,30.11 z"
      data-original="#00357B"
      class=""
      id="path10"
      inkscape:connector-curvature="0"
-     style="fill:#0f52ba;fill-opacity:1" />
+     style="fill:#3499ce;fill-opacity:1" />
   <path
      d="M 431.18,269.55 H 256 v -30.11 h 175.18 c 19.93,0 19.93,30.11 0,30.11 z"
      data-original="#001737"
      class=""
      id="path12"
      inkscape:connector-curvature="0"
-     style="fill:#0f52ba;fill-opacity:1" />
+     style="fill:#3499ce;fill-opacity:1" />
   <path
      d="M 431.18,141.05 H 77.8 c -19.92,0 -19.92,-30.12 0,-30.12 h 353.38 c 19.93,0 19.93,30.12 0,30.12 z"
      data-original="#00357B"
      class=""
      id="path14"
      inkscape:connector-curvature="0"
-     style="fill:#0f52ba;fill-opacity:1" />
+     style="fill:#3499ce;fill-opacity:1" />
   <path
      d="M 431.18,141.05 H 256 v -30.12 h 175.18 c 19.93,0 19.93,30.12 0,30.12 z"
      data-original="#001737"
      class=""
      id="path16"
      inkscape:connector-curvature="0"
-     style="fill:#0f52ba;fill-opacity:1" />
+     style="fill:#3499ce;fill-opacity:1" />
   <circle
      cx="352.37601"
      cy="256"
@@ -99,26 +99,26 @@
      data-original="#58B354"
      class=""
      id="circle18"
-     style="fill:#0f52ba;fill-opacity:1" />
+     style="fill:#3499ce;fill-opacity:1" />
   <path
      d="m 399.561,256 c 0,26.022 -21.163,47.184 -47.184,47.184 v -94.369 c 26.021,0.001 47.184,21.163 47.184,47.185 z"
      data-original="#00A963"
      id="path20"
      inkscape:connector-curvature="0"
-     style="fill:#0f52ba;fill-opacity:1" />
+     style="fill:#3499ce;fill-opacity:1" />
   <circle
      cx="223.875"
      cy="384.50201"
      r="47.183998"
      data-original="#FFEC00"
      id="circle22"
-     style="fill:#0f52ba;fill-opacity:1" />
+     style="fill:#3499ce;fill-opacity:1" />
   <path
      d="m 271.059,384.502 c 0,26.022 -21.163,47.184 -47.184,47.184 v -94.369 c 26.021,10e-4 47.184,21.163 47.184,47.185 z"
      data-original="#FFD92E"
      id="path24"
      inkscape:connector-curvature="0"
-     style="fill:#0f52ba;fill-opacity:1" />
+     style="fill:#3499ce;fill-opacity:1" />
   <circle
      cx="159.62399"
      cy="127.498"
@@ -126,13 +126,13 @@
      data-original="#FF2828"
      class=""
      id="circle26"
-     style="fill:#0f52ba;fill-opacity:1" />
+     style="fill:#3499ce;fill-opacity:1" />
   <path
      d="m 206.808,127.498 c 0,25.69 -20.621,46.632 -46.18,47.164 V 80.334 c 25.559,0.532 46.18,21.474 46.18,47.164 z"
      data-original="#C00"
      class="active-path"
      data-old_color="#c00"
-     style="fill:#0f52ba;fill-opacity:1"
+     style="fill:#3499ce;fill-opacity:1"
      id="path28"
      inkscape:connector-curvature="0" />
 </svg>

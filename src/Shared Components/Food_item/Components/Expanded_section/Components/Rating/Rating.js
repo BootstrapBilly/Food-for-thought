@@ -16,7 +16,7 @@ export const Rating = props => {
 
             case "14": return "32px"
             case "17": return "24px"
-            case "20": return "13px"
+            case "20": return "17px"
             case "24": return "8px"
         }
 
