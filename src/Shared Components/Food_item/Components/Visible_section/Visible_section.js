@@ -8,6 +8,7 @@ import Capitalise from "../../../../util/capitalise_first"
 //components
 import DetailArrow from "./Components/Detail_arrow/Detail_arrow"
 import Thumbnail from "./Components/Thumbnail/Thumbnail"
+import Rating from "../Expanded_section/Components/Rating/Rating"
 
 //redux hooks
 import { useSelector, useDispatch } from "react-redux"
@@ -59,8 +60,12 @@ export const Visible_section = props => {
 
             </Link>
 
-            <DetailArrow />
+            <Rating rating={props.data.rating} />
+            {/* <PortionToggle toggle_options={props.data.toggle_options} default_portion={props.data.default_portion} title={props.data.title} data={props.data} /> */}
 
+            <Link to={{ pathname: "/food_detail", state: { data: props.data } }} style={{ textDecoration: 'none' }}>
+                <DetailArrow />
+            </Link>
         </div>
 
     )

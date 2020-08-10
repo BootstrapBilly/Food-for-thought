@@ -3,6 +3,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    flex-wrap: wrap;
+
 }
 
 .title{
@@ -17,3 +19,7 @@
     width: fit-content;
 }
 
+.calories{
+    margin-top: 20px;
+    font-size: 20px;
+}

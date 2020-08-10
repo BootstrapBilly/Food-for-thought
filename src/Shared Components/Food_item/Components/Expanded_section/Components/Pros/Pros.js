@@ -12,7 +12,6 @@ import {useSelector} from "react-redux"
 export const Pros = props => {
 
     //?selectors
-    const good = useSelector(state => state.colour.good)
     const font_size = useSelector(state => state.font.size)
 
     return (

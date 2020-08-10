@@ -72,7 +72,7 @@ const food_items = [
         rating: 3,
         kcals: 144,
         source: "https://www.nutritionvalue.org/Fish%2C_raw%2C_bluefin%2C_fresh%2C_tuna_nutritional_value.html",
-        additional_source: "https://holisticacare.com/pros-cons-tuna/",
+        additional_source: {url:"https://holisticacare.com/pros-cons-tuna/", text:"The source of the mercury information can be found here"},
         pros: ["Cheap to buy", "Very high in protein", "High in omega 3 fatty acids", "High in many vitamins and minerals including B3, B6, B12, Phosphorous and Selenium"],
         cons: ["High in mercury, which is toxic in large doses (Research recommends you limit yourself to 3 times per month)"],
         categories: ["< 5 mins", "Lunch", "Dinner", "fish"],

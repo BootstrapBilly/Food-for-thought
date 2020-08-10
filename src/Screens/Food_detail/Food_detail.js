@@ -17,11 +17,11 @@ export const Food_detail = (props) => {
     //-config
     const data = props.location.state.data //extract the data passed when redirected from the food item preview
 
-    console.log(data)
-
     return (
 
         <div className={classes.container}>
+
+            <TopBar page={data.title} no_icons />
 
             <BackButton onClick={() => props.history.goBack()} />
 
@@ -31,13 +31,13 @@ export const Food_detail = (props) => {
 
                 <div className={classes.underlay_two}></div>
 
-                <img src={require(`../../Assets/Food_images/${data.image}.jpg`)} alt={props.title} className={classes.image}/>
+                <img src={require(`../../Assets/Food_images/${data.image}.jpg`)} alt={props.title} className={classes.image} />
 
             </div>
 
             <ContentToggle data={data} />
 
-            <TopBar page={data.title} />
+
 
             <NavBar />
 
