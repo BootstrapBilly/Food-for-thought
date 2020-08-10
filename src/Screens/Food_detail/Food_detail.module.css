@@ -26,28 +26,27 @@
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    position: relative;
 }
 
 .underlay_one{
-    width: 160px;
-    height: 170px;
+    width: 170px;
+    height: 175px;
     transform: rotate(-7deg);
     filter: drop-shadow(3px 3px 4px rgba(128, 128, 128, 0.611));
     background-color: #9cc0e7;
     position: absolute;
-    left: 85px;
-    top: 130px;  
+    left: 115px; 
 }
 
 .underlay_two{
-    width: 160px;
+    width: 170px;
     height: 175px;
     transform: rotate(12deg);
     filter: drop-shadow(3px 3px 4px rgba(128, 128, 128, 0.611));
     background-color: #f7dbd7;
     position: absolute;
-    right: 85px;
-    top: 120px;  
+    right: 115px;
 }
 
 .image{

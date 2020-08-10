@@ -4,16 +4,6 @@
     width: 100%;
     justify-content: center;
     position: absolute;
-    bottom: 15px;
-    left: -18px;
-    margin-top: 30px;
+    bottom: -18px;
+    left: -77px;
 }
-
-@supports (-webkit-touch-callout: none) {
-   
-    .container{
-        left: -25px;
-        bottom: 13px;
-    }
-  }
-  

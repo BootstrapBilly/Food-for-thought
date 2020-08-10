@@ -10,21 +10,10 @@ export const Rating = props => {
     //?selectors
     const font_size = useSelector(state => state.font.size)
 
-    const get_bottom_offset = font_size => {
-
-        switch(font_size){
-
-            case "14": return "32px"
-            case "17": return "24px"
-            case "20": return "17px"
-            case "24": return "8px"
-        }
-
-    }
 
     return (
 
-        <div className={classes.container} style={{bottom:get_bottom_offset(font_size)}}>
+        <div className={classes.container}>
 
             {[0, 1, 2, 3, 4].map((circle, index) =>
 
