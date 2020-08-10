@@ -59,7 +59,7 @@ export const Search_input = props => {
                     autoFocus
                     onChange={e => handle_input(e)}
                     value={search_string}
-                    style={{borderColor:primary, color:primary}}
+                    style={{borderColor:contrast, color:contrast}}
 
                 />
                 

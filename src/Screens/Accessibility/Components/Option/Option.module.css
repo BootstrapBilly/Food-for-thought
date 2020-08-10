@@ -18,16 +18,17 @@
 }
 
 .down_arrow {
-    height: 20px;
-    width: 20px;
+    height: 15px;
+    width: 15px;
     position: absolute;
+    transform: rotate(87deg);
     right: 12px;
-    top: 15px;
+    top: 18px;
     transition: transform 0.3s ease-in-out;
 }
 
 .arrow_expanded {
-    transform: rotate(180deg);
+    transform: rotate(267deg);
 }
 
 .text {

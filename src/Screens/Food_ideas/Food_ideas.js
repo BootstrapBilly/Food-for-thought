@@ -36,7 +36,7 @@ export const Recommended = () => {
 
             <TopBar page={"Food Ideas"} />
 
-            {items.map((item, index) => <FoodItem data={item} key={index} />)}
+            {items.map((item, index) => <FoodItem data={item} key={index} food_ideas />)}
 
             <NavBar />
 

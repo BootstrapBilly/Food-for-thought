@@ -20,7 +20,7 @@ const handle_filters = (state = initialState, action) => {
         case HANDLE_GOOD_CHANGE: return { ...state, good: `${action.payload}` }
         case HANDLE_BAD_CHANGE: return { ...state, bad: `${action.payload}` }
 
-        case RESET_COLOUR_SCHEME: return { ...state, primary: "#0f52ba", secondary:"#BA770F", contrast:"white", good:"green", bad:"red" }
+        case RESET_COLOUR_SCHEME: return { ...state, primary: "#3299CC", secondary:"#BA770F", contrast:"white", good:"green", bad:"red" }
 
         default:
 

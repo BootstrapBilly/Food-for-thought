@@ -16,11 +16,12 @@ export const Rating = props => {
 
             case "14": return "32px"
             case "17": return "24px"
-            case "20": return "16px"
+            case "20": return "13px"
             case "24": return "8px"
         }
 
     }
+
     return (
 
         <div className={classes.container} style={{bottom:get_bottom_offset(font_size)}}>

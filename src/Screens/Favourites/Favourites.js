@@ -69,7 +69,7 @@ export const Favourites = () => {
 
                 </div>
 
-                : favourites.map((food_item, index) => <FoodItem data={food_item} key={index} />)
+                : favourites.map((food_item, index) => <FoodItem data={food_item} key={index} favourites />)
 
             }
 

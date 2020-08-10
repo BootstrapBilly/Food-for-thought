@@ -79,11 +79,17 @@ export const Favourite_button = props => {
 
         <div className={classes.thumbnail_container} onClick={() => handle_toggle_favourite()}>
 
-            <img src={require(`../../../../../../Assets/Food_images/${props.src}.jpg`)} className={classes.thumbnail} alt={`An ${props.alt}`}/>
+            <div className={[classes.image_container, show_animation && classes.image_container_animated].join(" ")}>
 
-            <div className={classes.favourite_wrapper} style={{borderColor: is_favourited && `transparent transparent ${primary} transparent`}}>
+                <img src={require(`../../../../../../Assets/Food_images/${props.src}.jpg`)} className={classes.thumbnail} alt={`An ${props.alt}`} />
 
-                <img src={is_favourited ? Favourite_star : Favourite_star_white} alt="Add to your favourites" className={classes.favourite_star} />
+                <div className={classes.favourite_wrapper} style={{ borderColor: is_favourited && `transparent transparent orange transparent` }}>
+
+                    <img src={Favourite_star_white} alt="Add to your favourites" className={classes.favourite_star} />
+
+                </div>
+
+                {/* <div className={classes.favourite_border_provider} style={{ border: is_favourited && "2px solid orange" }}></div> */}
 
             </div>
 

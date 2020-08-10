@@ -48,7 +48,7 @@ export const Visible_section = props => {
 
             <Thumbnail src={props.data.thumbnail} alt={props.data.title} data={props.data} />
 
-            <Link to={{ pathname: "/food_detail", state: { data: props.data } }} style={{ textDecoration: 'none' }}>
+            <Link to={{ pathname: "/food_detail", state: { data: props.data, favourites:props.favourites && true, food_ideas:props.food_ideas && true } }} style={{ textDecoration: 'none' }}>
 
                 <div className={classes.text_section}>
 
@@ -58,12 +58,10 @@ export const Visible_section = props => {
 
                 </div>
 
-            </Link>
+            
 
             <Rating rating={props.data.rating} />
-            {/* <PortionToggle toggle_options={props.data.toggle_options} default_portion={props.data.default_portion} title={props.data.title} data={props.data} /> */}
 
-            <Link to={{ pathname: "/food_detail", state: { data: props.data } }} style={{ textDecoration: 'none' }}>
                 <DetailArrow />
             </Link>
         </div>

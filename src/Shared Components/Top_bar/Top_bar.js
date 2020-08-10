@@ -44,7 +44,7 @@ export const Top_bar = props => {
 
             }
 
-            <span className={classes.title} style={{ display: search_expanded && "none", fontSize: `${font_size * 1.1}px` }}>{props.page}</span>
+            <span className={classes.title} style={{ display: search_expanded && "none", fontSize: `${font_size * 1.5}px` }}>{props.page}</span>
 
             {!props.no_icons && <Search handle_toggle_search={() => set_search_expanded(!search_expanded)} search_expanded={search_expanded} />}
 

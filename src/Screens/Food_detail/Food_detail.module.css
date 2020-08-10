@@ -5,6 +5,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
 }
 
@@ -42,6 +43,12 @@
     width: 180px;
     object-fit: cover;
     height: 180px;
-
     filter: drop-shadow(3px 3px 4px rgba(128, 128, 128, 0.611));
+}
+
+.favourite_star{
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    height: 40px;
 }

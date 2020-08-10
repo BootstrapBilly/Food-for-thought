@@ -45,10 +45,19 @@ export const Nav_icon = props => {
             return set_show_animation(false)
 
         }, 150);
-
-
-
     }
+
+    const assign_active_icon = () => {
+
+        if(active_icon === "/food_detail" && props.to === "/" && props.from_food_ideas) return "recommended"
+
+        if(active_icon === "/food_detail" && props.from_favourites) return "favourites"
+
+        if(active_icon !== props.to) return `${props.source}-grey`
+        else return props.source
+        
+    }
+
 
     return (
 
@@ -56,7 +65,10 @@ export const Nav_icon = props => {
 
             <img
 
-                src={require(`../../../Assets/Icon/${active_icon === "/food_detail" && props.to === "/" ? "recommended" : active_icon !== props.to ? props.source + "-grey" : props.source}.svg`)}
+                src={require(`../../../Assets/Icon/${assign_active_icon()}.svg`)}
+
+                    // active_icon === "/food_detail" && props.to === "/" ? "recommended" : active_icon !== props.to ? props.source + "-grey" : props.source}.svg`)
+           
                 alt={props.alt}
                 className={[classes.icon, show_animation && classes.animated_icon].join(" ")}
 

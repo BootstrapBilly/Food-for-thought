@@ -9,7 +9,7 @@ import NavIcon from "./Components/Nav_icon"
 //redux hooks
 import {useSelector} from "react-redux"
 
-export const Nav_bar = () => {
+export const Nav_bar = props => {
 
     const primary = useSelector(state => state.colour.primary)
 
@@ -23,6 +23,8 @@ export const Nav_bar = () => {
                 text={"Food Ideas"}
                 alt={"A navigation icon to leading to the food ideas page"}
                 source="recommended"
+                from_food_ideas={props.from_food_ideas}
+
 
             />
 
@@ -32,6 +34,7 @@ export const Nav_bar = () => {
                 text={"Favourites"}
                 alt={"A navigation icon to leading to the Favourites page"}
                 source="favourites"
+                from_favourites={props.from_favourites}
 
             />
 
