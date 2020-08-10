@@ -9,7 +9,7 @@ import ToggleOption from "./Components/Toggle_option"
 import { useSelector, useDispatch } from "react-redux"
 
 //redux action creators
-import {send_request} from "../../../../../../Store/Actions/0_send_request_action"
+import { send_request } from "../../../../../../Store/Actions/0_send_request_action"
 
 export const Portion_toggle = props => {
 
@@ -22,7 +22,7 @@ export const Portion_toggle = props => {
 
     //*states
     const [active_portion, set_active_portion] = useState(props.default_portion)//hold the name of the currently active portion size so it can be highlighted
-    const [calorie_multiplier, set_calorie_multiplier] = useState(1)
+    const [calorie_multiplier, set_calorie_multiplier] = useState(1)//hold what the multiplier is, (set by changing the portion size - handled by backend)
 
     //!effects
     //every time the component is rendered, fetch the selected portion size from the backend
@@ -31,7 +31,14 @@ export const Portion_toggle = props => {
 
     //this effect calls the helper function to handle the response whenever  the component is rendered, or the portion size is changed
     // eslint-disable-next-line
-    useEffect(() => { if(response && (response.data.message === "portion preferences saved" || response.data.message === "Portion size data retrieved")) set_calorie_multiplier(response.data.details.multiplier)}, [response])
+    useEffect(() => {
+
+        //once the portion preferences have been retrieved
+        if (response && (response.data.message === "portion preferences saved" || response.data.message === "Portion size data retrieved"))
+
+            set_calorie_multiplier(response.data.details.multiplier)//set the kcal multiplier
+
+    }, [response])
 
 
     return (

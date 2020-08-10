@@ -24,14 +24,6 @@ export const Option = props => {
             />
 
             <span className={classes.text}>{props.text}</span>
-{/* 
-            <img
-
-                src={require(`../../../../Assets/Icon/expand.svg`)}
-                alt={`AN arrow to expand the ${props.text} option`}
-                className={[classes.down_arrow, props.open && classes.arrow_expanded].join(" ")}
-                
-            /> */}
 
         </div>
 

@@ -1,6 +1,7 @@
 .thumbnail_container {
     position: relative;
-    padding: 0 10px;
+    padding: 0 15px;
+    padding-right: 10px;
 }
 
 .image_container{

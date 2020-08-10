@@ -73,8 +73,6 @@ export const Favourites = () => {
 
             }
 
-
-
             <NavBar />
 
         </div>

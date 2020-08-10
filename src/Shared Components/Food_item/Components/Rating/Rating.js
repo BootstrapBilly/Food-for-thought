@@ -2,14 +2,7 @@ import React from 'react'
 
 import classes from './Rating.module.css'
 
-//redux hooks
-import { useSelector } from "react-redux"
-
 export const Rating = props => {
-
-    //?selectors
-    const font_size = useSelector(state => state.font.size)
-
 
     return (
 

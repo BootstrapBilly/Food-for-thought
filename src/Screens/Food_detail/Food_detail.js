@@ -8,6 +8,7 @@ import NavBar from "../../Shared Components/Nav_bar/Nav_bar"
 import TopBar from "../../Shared Components/Top_bar/Top_bar"
 import BackButton from "../../Shared Components/Back button/Back_button"
 import ContentToggle from "./Components/Content_toggle/Content_toggle"
+import LargeImage from "./Components/Large_image/Large_image"
 
 //external
 import { withRouter } from 'react-router-dom'
@@ -30,9 +31,9 @@ export const Food_detail = (props) => {
 
     //-config
     const data = props.location.state.data //extract the data passed when redirected from the food item preview
-    const from_favourites = props.location.state.favourites
-    const from_food_ideas = props.location.state.food_ideas
-    const dispatch = useDispatch()
+    const from_favourites = props.location.state.favourites//check if this page was reached from the favourites page
+    const from_food_ideas = props.location.state.food_ideas//or if it was reached from the food ideas page
+    const dispatch = useDispatch()//initialise the usedispatch hook
 
     //*states
     const [is_favourited, set_is_favourited] = useState(false)//determine whether to show the active favourite or non active icon
@@ -63,13 +64,9 @@ export const Food_detail = (props) => {
     //_functions
     const handle_toggle_favourite = () => {//this function is called whenever the user clicks the favourite icon
 
-        // if (!is_favourited) set_show_animation(true)//set the show animation state to add the animated class to the icon
-
         dispatch(send_request(data, "toggle_favourite"))//add or remove the favourite from the database
 
-        // if (window.location.href.includes("/favourites")) return //if the fooditem was removed from the favourites screen, do not update the icon because the whole card will disappear 
-
-     set_is_favourited(!is_favourited)//Otherwise update the icon so its not active and favourited anymore
+        set_is_favourited(!is_favourited)//Change the icon to the opposite of what it was before
 
     }
 
@@ -81,21 +78,20 @@ export const Food_detail = (props) => {
 
             <BackButton onClick={() => props.history.goBack()} />
 
-            <img src={is_favourited ? FavouriteStar : FavouriteStarGrey} alt="Add or remove from favourites" className={classes.favourite_star} onClick={() => handle_toggle_favourite()} />
+            <img
 
-            <div className={classes.image_container}>
+                src={is_favourited ? FavouriteStar : FavouriteStarGrey}
+                alt="Add or remove from favourites"
+                className={classes.favourite_star}
+                onClick={() => handle_toggle_favourite()}
 
-                <div className={classes.underlay_one}></div>
+            />
 
-                <div className={classes.underlay_two}></div>
-
-                <img src={require(`../../Assets/Food_images/${data.image}.jpg`)} alt={props.title} className={classes.image} />
-
-            </div>
+            <LargeImage src={data.image} />
 
             <ContentToggle data={data} />
 
-            <NavBar from_favourites={from_favourites} from_food_ideas={from_food_ideas}/>
+            <NavBar from_favourites={from_favourites} from_food_ideas={from_food_ideas} />
 
         </div>
 

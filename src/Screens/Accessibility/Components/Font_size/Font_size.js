@@ -50,8 +50,10 @@ export const Font_size = () => {
                         key={index}
 
                         style={{
+
                             background: active_font_size === font_size.name && primary,
                             color: active_font_size === font_size.name && contrast
+                            
                         }}
                         
                         onClick={() => handle_font_size_change(font_size.name, font_size.value, dispatch)}

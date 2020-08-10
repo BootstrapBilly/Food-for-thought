@@ -6,10 +6,10 @@ import classes from './Content_toggle.module.css'
 import { useSelector } from "react-redux"
 
 //components
-import Pros from "../../../../Shared Components/Food_item/Components/Expanded_section/Components/Pros/Pros"
-import Cons from "../../../../Shared Components/Food_item/Components/Expanded_section/Components/Cons/Cons"
-import Source from "../../../../Shared Components/Food_item/Components/Expanded_section/Components/Source/Source"
-import PortionToggle from "../../../../Shared Components/Food_item/Components/Expanded_section/Components/Portion_toggle/Portion_toggle"
+import Pros from "./Components/Pros/Pros"
+import Cons from "./Components/Cons/Cons"
+import Source from "./Components/Source/Source"
+import PortionToggle from "./Components/Portion_toggle/Portion_toggle"
 
 export const Content_toggle = props => {
 
@@ -40,9 +40,16 @@ export const Content_toggle = props => {
                 {["Portion", "Good", "Bad", "Links"].map(Link =>
 
                     <span className={classes.toggle_link}
-                        style={{ color: active_link === Link && handle_colour_assignment(Link), fontSize:`${font_size * 1}px` }}
+
+                        style={{ color: active_link === Link && handle_colour_assignment(Link), fontSize: `${font_size * 1}px` }}
+
                         onClick={() => set_active_link(Link)}
-                    >{Link}</span>
+
+                    >
+
+                        {Link}
+
+                    </span>
 
                 )}
 
@@ -50,9 +57,17 @@ export const Content_toggle = props => {
 
             <div className={classes.bottom_section}>
 
-
                 {
-                    active_link === "Portion" ? <PortionToggle toggle_options={props.data.toggle_options} default_portion={props.data.default_portion} title={props.data.title} data={props.data} />
+                    active_link === "Portion" ?
+
+                        <PortionToggle
+
+                            toggle_options={props.data.toggle_options}
+                            default_portion={props.data.default_portion}
+                            title={props.data.title}
+                            data={props.data}
+
+                        />
 
                         : active_link === "Good" ? <Pros data={props.data.pros} />
 

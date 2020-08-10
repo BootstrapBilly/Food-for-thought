@@ -3,20 +3,18 @@ import React, { useEffect, useState } from 'react'
 import classes from "./Thumbnail.module.css"
 
 //assets
-import Favourite_star_white from "../../../../../../Assets/Icon/favourites-white.svg"
-import Favourite_star from "../../../../../../Assets/Icon/favourites.svg"
+import Favourite_star_white from "../../../../Assets/Icon/favourites-white.svg"
 
 //redux hooks
 import { useDispatch, useSelector } from "react-redux"
 
 //redux action creators
-import { send_request } from "../../../../../../Store/Actions/0_send_request_action"
+import { send_request } from "../../../../Store/Actions/0_send_request_action"
 
 export const Favourite_button = props => {
 
     //?selectors
     const response = useSelector(state => state.request.response)//grab the response from the api
-    const primary = useSelector(state => state.colour.primary)
 
     //*states
     const [is_favourited, set_is_favourited] = useState(false)//determine whether to show the active favourite or non active icon
@@ -81,7 +79,7 @@ export const Favourite_button = props => {
 
             <div className={[classes.image_container, show_animation && classes.image_container_animated].join(" ")}>
 
-                <img src={require(`../../../../../../Assets/Food_images/${props.src}.jpg`)} className={classes.thumbnail} alt={`An ${props.alt}`} />
+                <img src={require(`../../../../Assets/Food_images/${props.src}.jpg`)} className={classes.thumbnail} alt={`An ${props.alt}`} />
 
                 <div className={classes.favourite_wrapper} style={{ borderColor: is_favourited && `transparent transparent orange transparent` }}>
 

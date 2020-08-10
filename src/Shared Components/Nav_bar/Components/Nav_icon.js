@@ -9,9 +9,8 @@ import { Redirect } from "react-router-dom"
 //redux hooks
 import { useDispatch, useSelector } from "react-redux"
 
-//redux action creators
-import { clear_filters } from "../../../Store/Actions/1_handle_filters_action"
-import { clear_search_string } from "../../../Store/Actions/2_handle_search_action"
+//functions
+import handle_redirect from "./Functions/handle_redirect"
 
 export const Nav_icon = props => {
 
@@ -26,49 +25,30 @@ export const Nav_icon = props => {
     //*states
     const [redirect, set_redirect] = useState(null)//this state does nothing until it is set, then when it is, it triggers the redirect (set by clicking an icon)
     const [active_icon, set_active_icon] = useState(null)//determines the currently active icon (to make it poke out of the bar at the bottom)
-    const [show_animation, set_show_animation] = useState(false)
+    const [show_animation, set_show_animation] = useState(false)//set to true whenever a link is clicked, it will apply the animation class, then the handle_redirect function will clean it up after
 
     //!effects
     useEffect(() => { set_active_icon(url) }, [url])//whenever the url changes, set the icon to match so it is active
 
-    //_functions
-    const handle_redirect = () => {
-
-        set_show_animation(true)//set the show animation state to true, so the icon will bounce when selected
-
-        setTimeout(() => {//dont redirect until after 0.3s, so the icon can do its animation
-
-            dispatch(clear_filters())//clear any active filters before navigating
-            dispatch(clear_search_string())//clear the search string before navigating
-            set_redirect(props.to)//redirect them to their desired page
-            window.scrollTo(0, 0)
-            return set_show_animation(false)
-
-        }, 150);
-    }
-
+    // //_functions
     const assign_active_icon = () => {
 
-        if(active_icon === "/food_detail" && props.to === "/" && props.from_food_ideas) return "recommended"
+        if (active_icon === "/food_detail" && props.to === "/" && props.from_food_ideas) return "recommended"
 
-        if(active_icon === "/food_detail" && props.from_favourites) return "favourites"
+        if (active_icon === "/food_detail" && props.from_favourites) return "favourites"
 
-        if(active_icon !== props.to) return `${props.source}-grey`
+        if (active_icon !== props.to) return `${props.source}-grey`
         else return props.source
-        
-    }
 
+    }
 
     return (
 
-        <div className={classes.container} onClick={() => handle_redirect()}>
+        <div className={classes.container} onClick={() => handle_redirect(set_show_animation, dispatch, set_redirect, props)}>
 
             <img
-
+                a
                 src={require(`../../../Assets/Icon/${assign_active_icon()}.svg`)}
-
-                    // active_icon === "/food_detail" && props.to === "/" ? "recommended" : active_icon !== props.to ? props.source + "-grey" : props.source}.svg`)
-           
                 alt={props.alt}
                 className={[classes.icon, show_animation && classes.animated_icon].join(" ")}
 

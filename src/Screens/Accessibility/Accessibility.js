@@ -13,8 +13,10 @@ import FontSize from "./Components/Font_size/Font_size"
 export const Accessiblity = () => {
 
     const [open_options, set_open_options] = useState({//state to determine whether any accessiblity options are expanded
+
         color: false,//the colour scheme option
         font: false//the font size option
+        
     })
 
     return (

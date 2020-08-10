@@ -12,6 +12,7 @@ export const Back_button = props => {
         <div className={classes.container} onClick={props.onClick}>
 
             <img src={Arrow} alt="Go back" className={classes.icon}/>
+            
             Go Back
 
         </div>

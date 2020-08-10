@@ -25,7 +25,6 @@ export const Nav_bar = props => {
                 source="recommended"
                 from_food_ideas={props.from_food_ideas}
 
-
             />
 
             <NavIcon
