@@ -4,7 +4,8 @@ A very hi-fi prototype for a **mobile browser application, which is part of my U
 
 # Important notice
 
-The API is hosted on a free heroku server and the app may take up to 10 seconds to "Wake up" as a result of the free server
+Please bear in mind the app is hosted on a free server, and therefore may take 10 seconds to "Wake up" and certain features may not persist (Adding to favourites and changing portion size)
+However, after the server is awake, these features will work as expected.
 
 # Features
 
