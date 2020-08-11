@@ -9,13 +9,13 @@ A very hi-fi prototype for a **mobile browser application, which is part of my U
 #### - Add and remove food items from favourites
 #### - Apply filters to display certain types of food (breakfast, lunch, dinner ect)
 #### - Search for specific food items
-##### By name (Avocado)
-##### By meal type (Lunch)
-##### By category (Salad)
 #### - Search also works when filters are active
+#####   By name (Avocado)
+#####   By meal type (Lunch)
+#####   By category (Salad)
 #### - Accessibility features such as
-##### Set your own colour scheme
-##### Set your own font size
+#####   Set your own colour scheme
+#####   Set your own font size
 
 ## Available Scripts
 
