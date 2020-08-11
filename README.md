@@ -8,17 +8,17 @@ The API is hosted on a free heroku server and the app may take up to 10 seconds 
 
 # Features
 
-### - Display a list of healthy and inexpensive food to expire people to eat healthier
-### - Allow users to view good points, bad points, the source of nutrition information, and adjust portion size of each individual food item
-### - Add and remove food items from favourites
-### - Apply filters to display certain types of food (breakfast, lunch, dinner ect)
-### - Search for specific food items (also works in conjunction with filters)
-####   &nbsp;&nbsp;&nbsp; By name (Avocado)
-####  &nbsp;&nbsp;&nbsp;  By meal type (Lunch)
-####  &nbsp;&nbsp;&nbsp;  By category (Salad)
+### Display a list of healthy and inexpensive food to expire people to eat healthier
+### Allow users to view good points, bad points, the source of nutrition information, and adjust portion size of each individual food item
+### Add and remove food items from favourites
+### Apply filters to display certain types of food (breakfast, lunch, dinner ect)
+### Search for specific food items (also works in conjunction with filters)
+####   &nbsp;&nbsp;&nbsp;- By name (Avocado)
+####  &nbsp;&nbsp;&nbsp; - By meal type (Lunch)
+####  &nbsp;&nbsp;&nbsp; - By category (Salad)
 ### - Accessibility features such as
-####  &nbsp;&nbsp;&nbsp; Set your own colour scheme
-####   &nbsp;&nbsp;&nbsp; Set your own font size
+####  &nbsp;&nbsp;&nbsp; - Set your own colour scheme
+####   &nbsp;&nbsp;&nbsp; - Set your own font size
 
 # Live site (only optimised for mobile screens)
 
