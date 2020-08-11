@@ -16,6 +16,10 @@ A very hi-fi prototype for a **mobile browser application, which is part of my U
 #####  &nbsp;&nbsp;&nbsp; Set your own colour scheme
 #####   &nbsp;&nbsp;&nbsp; Set your own font size
 
+## Live site (only optimised for mobile screens)
+
+https://food-for-thoughtt.web.app/
+
 ## The API
 
 https://github.com/BootstrapBilly/Food-for-though-API
@@ -32,4 +36,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+<img src="./samples/screenshot.png" height="480" width="360">
+
+<img src="./samples/screenshot2.png" height="480" width="360">
 
