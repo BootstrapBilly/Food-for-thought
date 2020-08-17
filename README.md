@@ -29,19 +29,8 @@ https://food-for-thoughtt.web.app/
 
 https://github.com/BootstrapBilly/Food-for-though-API
 
-# Available Scripts
+# How to run it
 
-In the project directory, you can run:
-
-## `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-<img src="./Samples/screenshot.png" height="640" width="360">
-
-<img src="./Samples/screenshot2.png" height="640" width="360">
-
+```javascript 
+npm start
+```
